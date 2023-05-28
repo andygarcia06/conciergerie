@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const sidebar = document.querySelector(".sidebar");
   const closeButton = document.querySelector(".close-button");
   const siteHeader = document.querySelector(".conciergerie-main-nav");
-  const closeContact = document.querySelector('.close-icon-second');
 
 
 
@@ -35,9 +34,7 @@ secondSidebar.style.display = 'none';
   }
 });
 
-function closeContactSideBar() {
-  closeContact.style.display = 'none';
-}
+
 
 // GSAP
 
