@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" type="text/css" href="assets/css/plugins/bootstrap.min.css">
+        <!-- icons -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- gsap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+</head>
+<body id="index-body">
+  
+  <!-- <div class="preloader">
+    <div class="spinner"></div>
+    <video id="myVideo" preload="auto" loop muted>
+      <source src="./assets/video/picturesque-view-of-nice-france-in-the-evening-2023-04-13-06-39-37-utc.mp4" type="video/mp4">
+    </video>
+  </div> -->
+    <header id="home" class="conciergerie-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+      
+               <!-- logo -->
+               <!-- <div class="logo"><a href="index.html">CONCIERGERIE</a></div> -->
+               <!-- /logo -->
+      
+               <!-- navigation -->
+               <nav>
+                <div class="conciergerie-logo">
+                    <span>Conciergerie</span>
+                </div>
+                <ul class="conciergerie-main-nav">
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./about-us.html">About</a></li>
+                    <li><a href="./solution.html">Nos Solutions</a></li>
+                    <li><a href="./portfolio-classic.html">Nos biens</a></li>
+                    <li><a href="./blog-creative.html">Blog</a></li>
+                    <li><a href="./contact-1.html">Contact</a></li>
+                </ul>
+                <div class="conciergerie-hamburger-menu">
+                    <div class="menu-icon"><i class="fa fa-bars"></i></div>
+                    <div class="menu-icon"><i class="fa fa-phone" id="phone-icon"></i>
+                    </div>
+                </div>
+                <div class="sidebar">
+                  <span class="close-button">&times;</span>
+                  <ul>
+                    <li><a href="./index.html">Accueil</a></li>
+                    <li><a href="./about-us.html">About</a></li>
+                    <li><a href="./solution.html">Nos Solutions</a></li>
+                    <li><a href="./portfolio-classic.html">Nos biens</a></li>
+                    <li><a href="./blog-creative.html">Blog</a></li>
+                    <li><a href="./contact-1.html">Contact</a></li>
+                  </ul>
+                </div>
+                <div class="sidebar second-sidebar" id="second-sidebar">
+                  <span onclick="closeContactSideBar" class="close-icon-second">&times;</span>
+                  <div class="contacts-infos">
+                    <div class="contact-item">
+                      <h5>Quentin GUIDICELLI</h5>
+                      <div class="coordonates">
+                        <p>mail@mail.com</p>
+                        <p>+3300000000</p>
+                      </div>
+                    </div>
+                    <div class="contact-item">
+                      <h5>Anthony GASTAUD</h5>
+                      <div class="coordonates">
+                        <p>mail@mail.com</p>
+                        <p>+3300000000</p>
+                      </div>
+                    </div>
+                    <div class="contact-item">
+                      <h5>Contact 3</h5>
+                      <div class="coordonates">
+                        <p>mail@mail.com</p>
+                        <p>+3300000000</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </nav>
+               <!-- <nav class="text-light" >
+      
+                  <div id="glacier_menu">
+                      <ul>
+                      <li class="has-sub">
+                          <a href="#">
+                              <span>Accueil</span>
+                          </a>
+                      </li>
+                      <li class="has-sub">
+                          <a href="#">
+                              <span>About</span>
+                          </a>
+                          <ul>
+                              <li>
+                                  <a href="about-us.html">
+                                      <span>About us</span>
+                                  </a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="has-sub">
+                        <a href="./solution.html">
+                            <span>Nos Solutions</span>
+                        </a>
+                    </li>
+                      
+                      <li class="has-sub">
+                          <a href="./portfolio-classic.html">
+                              <span>Nos biens</span>
+                          </a>
+                          <ul>
+                              <li class="has-sub">
+                                  <a href="./portfolio-classic.html">
+                                      <span>tous nos biens</span>
+                                  </a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="has-sub">
+                          <a href="./blog-creative.html">
+                              <span>Blog</span>
+                          </a>
+                      </li>
+                      <li class="has-sub">
+                          <a href="./contact-1.html">
+                              <span>Contact</span>
+                          </a>
+                          </ul>
+                      </li>
+                      </ul>
+                  </div>
+      
+               </nav> -->
+               <!-- /navigation -->
+      
+      
+             </div>
+           </div>
+        </div>
+      </header>
+      <main>
+        <div class="conciergerie-main-content">
+          <div class="stripes">
+            <div class="line-one"></div>
+            <div class="line-two"></div>
+          </div>
+          <div class="conciergerie-main-title">
+            <p>Nice</p>
+            <h1>Conciergerie.</h1>
+          </div>
+          <div class="conciergerie-main-button">
+            <a href="">Contact Us</a>
+          </div>
+          <div class="conciergerie-year">
+            2023
+          </div>
+          <div class="conciergerie-media">
+            <ul>
+              <li><i class="fa fa-facebook"></i></li>
+              <li><i class="fa fa-instagram"></i></li>
+              <li><i class="fa fa-twitter"></i></li>
+            </ul>
+          </div>
+        </div>
+        <div class="next-section">
+          <a href="#swiper-2"><i class="fa fa-arrow-down"></i></a>
+        </div>
+      </main>
+        <!-- Slider main container -->
+    <div class="swiper swiper-2" id="swiper-2">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide slide-anchor" id="swiper-slide-4" data-index="0">
+          <div class="solution-wrapper conciergerie-solution">
+            <h2>NOS SOLUTIONS</h2>
+            <div class="row">
+              <a href="#home" class="close-swiper"><span >&times;</span></a>
+              <div class="col-md-12">
+                  <p>Nous proposons des solutions flexibles et personnalisées qui correspondront exactement à vos besoins tout en respectant les règlementations en vigueur à Nice.
+                  Notre priorité est de proposer aux voyageurs la meilleure expérience tout en maximisant votre rentabilité.
+                  BMG permet également aux propriétaires de réserver leur bien quand bon leur semble à des fins personnelles. 
+                  Vous pouvez donc tout simplement choisir l'option qui vous correspond le mieux, en fonction de vos préférences.</p>
+              </div>
+
+              <div class="solutions-container">
+                <div class="solution-container">
+                  <h4>Forfait location saisonnière </h4>
+                  <p>A partir de 20%</p>
+                </div>
+                <div class="solution-container">
+                  <h4>Forfait location moyenne durée </h4>
+                  <p>A partir de 12%</p>
+                </div>
+                <div class="solution-container">
+                  <h4>Forfait location mixte </h4>
+                  <p>Période saisonnière : A partir de 20% <br>
+                  Période Etudiante : A partir de 8%</p>
+                </div>
+              </div>
+              <button class="col-md-4 m-auto mt-5"><a style="color: white;" href="./solution.html">découvrir NOS SOLUTIONS</a></button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide slide-anchor" id="swiper-slide-1" data-index="1">
+            <div class="row">
+              <div class="left-swiper-block col-md-6" >
+                <h3 class="text-center">WHO WE ARE ?</h3>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, necessitatibus consequatur dolorem esse laborum, neque illum recusandae soluta nemo cum doloribus. Voluptates, suscipit rerum corporis quae aperiam nesciunt iure at. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente consequatur corrupti unde deserunt ut nobis architecto culpa delectus nisi, debitis, nemo soluta fugit illo, voluptate reiciendis ratione pariatur optio est.</p>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto beatae, nesciunt consequuntur rem, dolorum fugit ducimus deleniti iste provident, nobis ullam nihil. Hic, nihil blanditiis fugit nostrum architecto perspiciatis eos. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit atque ipsam, debitis obcaecati cupiditate illum sint eos ea molestias! Ea sunt neque aperiam ad. Quas consectetur repellat totam sint? Omnis!</p>
+                  <button><a style="color: white;" href="./about-us.html">CONTACT US</a></button>
+              </div>
+            </div>
+        </div>
+        <div class="swiper-slide slide-anchor" id="swiper-slide-2" data-index="2"> 
+            <div class="container-masonry"> 
+            <!-- filter -->
+            <h2 class="text-center">NOS DERNIERS BIENS</h2>
+            <div class="portfolioFilter text-center">
+                <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
+                <div data-filter=".branding" class="cbp-filter-item">filtre 1</div>
+                <div data-filter=".design" class="cbp-filter-item">filtre 2</div>
+                <div data-filter=".illustration" class="cbp-filter-item">filtre 3</div>
+            </div>
+            <!-- /filter -->         
+                <div class="gridywrap">
+                  <div class="gridy-2 gridyhe-1">
+                    <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-1/flat-2.webp)">&nbsp;</div>
+                    
+                    <div class="gridinfo">
+                      <h3 class="gridtitle">Grand appartement au cœur de Nice</h3>
+                      <a href="./flat-html/portfolio-single-1.html" class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
+                    </div>
+                  </div>
+                  <div class="gridy-1 gridyhe-1">
+                    <div class="gridimg" style="background-image: url(./assets//images/flat-img/flat-2/flat-1.webp)">&nbsp;</div>
+                    
+                    <div class="gridinfo">
+                      <h3 class="gridtitle">Nid douillet au cœur de la Ville </h3>
+                      <a href="./flat-html/portfolio-single-2.html" class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
+                    </div>
+                  </div>
+                  <div class="gridy-1 gridyhe-2">
+                    <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-4/flat-1.webp)">&nbsp;</div>
+                    
+                    <div class="gridinfo">
+                      <h3 class=gridtitle">Villa contemporaine dans les hauteurs de Nice</h3>
+                      </p>
+                      <a href="./flat-html/portfolio-single-3.html" class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
+                    </div>
+                  </div>
+                  <div class="gridy-2 gridyhe-1">
+                    <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-3/flat-1.webp)">&nbsp;</div>
+                    
+                    <div class="gridinfo">
+                      <h3 class="gridtitle">Grand appartement au centre de Nice </h3>
+                      <a href="./flat-html/portfolio-single-4.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
+                    </div>
+                  </div>
+                  <div class="gridy-1 gridyhe-1">
+                    <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-5/flat-1.webp)">&nbsp;</div>
+                    <div class="gridinfo">
+                      <h3 class="gridtitle">L'atelier maison - Piscine jardin et vue sur les collines de Nice</h3>
+                      <a href="./flat-html/portfolio-single-5.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
+                    </div>
+                  </div>
+                  <div class="gridy-1 gridyhe-1">
+                    <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-6/flat-1.webp)">&nbsp;</div>
+                    
+                    <div class="gridinfo">
+                      <h3 class="gridtitle">Bel appartement place Rossetti </h3>
+                      <a href="./flat-html/portfolio-single-6.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
+                    </div>
+                  </div>
+                  <div class="gridy-1 gridyhe-1">
+                      <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-7/falt-1.webp)">&nbsp;</div>
+                      
+                      <div class="gridinfo">
+                        <h3 class="gridtitle"> Charmant appartement au cœur du carre d’or </h3>
+                        <a href="./flat-html/portfolio-single-7.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
+                      </div>
+                    </div>
+                  <div class="gridy-2 gridyhe-1">
+                      <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-8/flat-1.webp)">&nbsp;</div>
+                      
+                      <div class="gridinfo">
+                        <h3 class="gridtitle">Charmant appartement proche place Massena </h3>
+                        <a href="./flat-html/portfolio-single-8.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
+                      </div>
+                    </div>
+                    <div class="gridy-1 gridyhe-2">
+                      <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-9/flat-1.webp)">&nbsp;</div>
+                      
+                      <div class="gridinfo">
+                        <h3 class="gridtitle">Magnifique appartement de luxe au sein du carre d’or </h3>
+                        <a href="./flat-html/portfolio-single-9.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
+                      </div>
+                    </div>
+  
+                    <div class="gridy-2 gridyhe-1">
+                      <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-10/flat-1.webp)">&nbsp;</div>
+                      
+                      <div class="gridinfo">
+                        <h3 class="gridtitle"> Loft au cœur de la Liberation </h3>
+                        <a href="./flat-html/portfolio-single-10.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
+                      </div>
+                    </div>
+                    
+                    <div class="gridy-1 gridyhe-1">
+                      <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-11/flat-1.webp)">&nbsp;</div>
+                      <div class="gridinfo">
+                        <h3 class="gridtitle">Grand et cosy T3 proche  jardin Wilson  </h3>
+                        <a href="./flat-html/portfolio-single-11.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
+                      </div>
+                    </div>
+                    
+                    <div class="gridy-1 gridyhe-1">
+                      <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-12/flat-1.webp)">&nbsp;</div>
+                      
+                      <div class="gridinfo">
+                        <h3 class="gridtitle">Magnifique appartement au cœur du vieux Nice</h3>
+                        <a href="./flat-html/portfolio-single-15.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
+                      </div>
+                    </div>
+                    <div class="gridy-1 gridyhe-1">
+                      <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-13/flat-1.webp)">&nbsp;</div>
+                      <div class="gridinfo">
+                        <h3 class="gridtitle">Cocon au cœur de la vieille ville </h3>
+                        <a href="./flat-html/portfolio-single-12.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
+                      </div>
+                    </div>
+                    <div class="gridy-1 gridyhe-1">
+                      <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-14/flat-1.webp)">&nbsp;</div>
+                      
+                      <div class="gridinfo">
+                        <h3 class="gridtitle">Magnifique studio au cœur du vieux Nice</h3>
+                        <a href="./flat-html/portfolio-single-13.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
+                      </div>
+                    </div>
+                    <div class="gridy-1 gridyhe-1">
+                        <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-15/flat-1.webp)">&nbsp;</div>
+                        
+                        <div class="gridinfo">
+                          <h3 class="gridtitle">Havre de paix au cœur du vieux Nice</h3>
+                          <a href="./flat-html/portfolio-single-14.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
+                        </div>
+                      </div>
+                </div>
+          </div>
+        </div>
+        <div class="swiper-slide slide-anchor" id="swiper-slide-3" data-index="3">            
+          <div class="row">
+          <div class="col-md-12">
+           <div class="">
+             <div class="row m-2">
+                 <div class="col-md-5 text-center right-swiper-block" >
+                   <h3 class="text-center">ABOUT US ?</h3>
+                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, necessitatibus consequatur dolorem esse laborum, neque illum recusandae soluta nemo cum doloribus. Voluptates, suscipit rerum corporis quae aperiam nesciunt iure at. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente consequatur corrupti unde deserunt ut nobis architecto culpa delectus nisi, debitis, nemo soluta fugit illo, voluptate reiciendis ratione pariatur optio est.</p>
+                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto beatae, nesciunt consequuntur rem, dolorum fugit ducimus deleniti iste provident, nobis ullam nihil. Hic, nihil blanditiis fugit nostrum architecto perspiciatis eos. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit atque ipsam, debitis obcaecati cupiditate illum sint eos ea molestias! Ea sunt neque aperiam ad. Quas consectetur repellat totam sint? Omnis!</p>
+                     <button><a style="color: white;" href="./about-us.html">ABOUT US</a></button>
+                 </div>
+             </div>
+            </div>
+          </div>
+
+         </div></div>
+        <div class="swiper-slide slide-anchor" id="swiper-slide-5" data-index="4">
+          <div class="container-contact">
+            <div class="col-md-12">
+                
+              <div class="contact-form">
+              <div id="note"></div>
+                 <div id="fields">
+                  <h2>Contactez-nous </h2>
+                     <form id="ajax-contact-form">
+                       <p><input type="text" name="name" id="name" placeholder="Nom" value=""/></p>
+                       <p><input type="email" name="email" id="email" placeholder="Email" value=""/></p>
+                       <p><input type="text" name="phone" id="phone" placeholder="Phone" value=""/></p>
+                       <p><textarea name="msg" id="msg" placeholder="Message"></textarea></p>
+                       <input type="submit" name="submit" id="submit" value="Envoyer votre message"/>
+                     </form>
+                  </div>
+                 </div>
+
+        </div>
+        </div>
+        </div>
+    </div>
+    <!-- If we need pagination -->
+    <!-- <div class="swiper-pagination"></div> -->
+
+    <!-- If we need navigation buttons -->
+    <!-- <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div> -->
+    <button class="custom-swiper-button-prev">
+      <i class="fa fa-arrow-up"></i>
+    </button>
+    
+    <button class="custom-swiper-button-next">
+      <i class="fa fa-arrow-down"></i>
+    </button>
+
+
+    <!-- If we need scrollbar -->
+
+    </div>
+    <div>
+        
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/swiper-2.js"></script>
+    
+</body>
+</html>

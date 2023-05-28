@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page d'administration</title>
+</head>
+<body>
+	<h1>Ajouter un article</h1>
+	<form id="ajouter-article-form">
+		<label for="titre">Titre:</label>
+		<input type="text" id="titre" name="titre" required><br><br>
+		<label for="image">URL de l'image:</label>
+		<input type="text" id="image" name="image" required><br><br>
+		<label for="contenu">Contenu:</label><br>
+		<textarea id="contenu" name="contenu" rows="10" required></textarea><br><br>
+		<button type="submit">Ajouter l'article</button>
+	</form>
+	
+	<script>
+		let form = document.getElementById('ajouter-article-form');
+		
+		form.addEventListener('submit', (event) => {
+			event.preventDefault(); // empêcher la soumission du formulaire
+			
+			// récupérer les données saisies par l'utilisateur
+			let titre = document.getElementById('titre').value;
+			let image = document.getElementById('image').value;
+			let contenu = document.getElementById('contenu').value;
+			
+			// créer un nouvel objet article
+			let nouvelArticle = {
+				id: Date.now(), // générer un ID unique pour l'article
+				titre: titre,
+				image: image,
+				contenu: contenu
+			};
+			
+			// envoyer les données au serveur pour mise à jour du fichier JSON
+			fetch('/api/ajouter-article', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(nouvelArticle)
+			})
+			.then(response => response.json())
+			.then(data => {
+				console.log('Article ajouté avec succès:', data);
+				// rediriger l'utilisateur vers la page d'accueil ou afficher un message de confirmation
+			})
+			.catch(error => console.error('Erreur lors de l\'ajout de l\'article:', error));
+		});
+	</script>
+</body>
+</html>
