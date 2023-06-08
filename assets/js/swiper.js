@@ -7,6 +7,7 @@ const swiper = new Swiper('.swiper', {
     grabCursor: true,
     centeredSlides: true,
 
+
   
     // If we need pagination
     pagination: {

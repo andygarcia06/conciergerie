@@ -5,7 +5,7 @@ const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'vertical',
     grabCursor: true,
-    // mousewheel: true,
+    mousewheel: true,
     effect: "fade",
     effect: "fade",
     keyboard: {
