@@ -4369,6 +4369,10 @@ ion-icon:hover{
 
 @media screen and (max-width: 575px) {
 
+    .conciergerie-hamburger-menu{
+        left: 88% !important;
+    }
+
     
     #popup-container-1, #popup-container-2, #popup-container-3{
         width: 100%;
@@ -4389,7 +4393,7 @@ ion-icon:hover{
     }
 
     .mySwiper-slide h1{
-        font-size: 200% !important;
+        font-size: 300% !important;
     }
 
     .conciergerie-cta-txt{
@@ -4397,7 +4401,7 @@ ion-icon:hover{
     }
 
     .mySwiper-slide h2{
-        font-size: 200% !important;
+        font-size: 280% !important;
     }
 
     /* main */
