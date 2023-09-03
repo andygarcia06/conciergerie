@@ -1,22 +1,75 @@
-/*
-    Glacier - Clean & Minimal Portfolio HTML5 Template
-    Version: 1.0.1
-    Author: Mountain-Themes
-    Author URL: https://themeforest.net/user/mountain-themes
-    Glacier © 2023. Design & Coded by Mountain-Themes.
-    
-    TABLE OF CONTENTS
-    ---------------------------
-     1. General
-     2. Header
-     3. Portfolio
-     4. Blog
-     5. Footer
-     6. Shop
-     7. Elements
-     8. Responsive CSS
-*/
+@font-face {
+    font-family: 'Fonseca';
+    src: url('../fonts/fonseca-art-deco-font-family-pack-2022-12-16-21-37-14-utc/Fonseca-Light.otf') format('otf'), /* Chemin vers le fichier WOFF2 */
+    /* Autres déclarations comme font-weight et font-style si nécessaire */
+  }
+/* initial */
 
+  .preloader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 800000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1; 
+    transition: opacity 1s ease; 
+    flex-direction: column;
+  }
+  .preloader-logo{
+    width: 100%;
+    text-align: center;
+  }
+
+  .preloader-logo img{
+    max-width: 20%;
+  }
+  
+
+  .loader{
+    width: 30px;
+    height: 30px;
+    margin: 50px auto 0;
+    position: relative;
+    animation: 1s spinning infinite;
+}
+.loader:before,
+.loader:after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 10px;
+    border: 10px solid rgb(16, 153, 158);
+    border-top: none;
+    border-bottom: none;
+    margin-bottom: 10px;
+    animation: 1s movingRight infinite;
+}
+.loader:after{ 
+    animation: 1s movingLeft infinite; 
+}
+@keyframes spinning{
+    0%{ transform: rotate(0deg); }
+    40%, 100%{ transform: rotate(90deg); }
+}
+@keyframes movingLeft{
+    0%{ transform: translateX(0%); }
+    40%{ transform: translateX(-50%); }
+    100%{ transform: translateX(0%);  } 
+}
+@keyframes movingRight{
+    0%{ transform: translateX(0%);  }
+    40%{ transform: translateX(50%); }
+    100%{ transform: translateX(0%); }
+}
+  
+
+  
+  
 
 /* ================================= */
 /* :::::::::: 1. General ::::::::::: */
@@ -36,11 +89,268 @@ body {
     font-size: 15px;
     font-weight: 300;
     scroll-behavior: smooth;
-}
-
-#index-body{
     overflow: hidden;
 }
+
+.no-overlow-hidden{
+    overflow: auto;
+}
+
+.active {
+    opacity: 1;
+}
+
+
+
+.conciergerie-main-background{
+    /* background: url('../images/parallax/parallax-11.JPG') no-repeat center center fixed;  */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* margin:0 4.5rem; */
+}
+
+header{
+    background: rgba(0, 0, 0, 0);
+    position: absolute !important;
+}
+
+
+.conciergerie-main{
+    width: 100%;
+    height: 100vh;
+    padding: 0 !important;
+}
+
+.conciergerie-span-color{
+    color: rgb(16, 153, 158);
+}
+
+.conciergerie-span-text-stroke{
+    -webkit-text-stroke:4px rgb(16, 153, 158) ;
+    color: rgb(16, 153, 158);
+}
+
+.mySwiper-main{
+    height: 120vh !important;
+    width: 100% !important;
+}
+
+.mySwiper-wrapper{
+    width: 100% !important;
+    height: 100vh !important;
+}
+
+
+.mySwiper-slide{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100% !important;
+    height: 120vh !important;
+}
+
+.mySwiper-container{
+    display: flex;
+    flex-direction: row;
+    z-index: 50000000000;
+    position: absolute;
+}
+
+.mySwiper-left{
+    width: 70%;
+    height: 100vh;
+    padding:13% 10%;
+    font-family: 'Fonseca';
+    text-transform: initial;
+    color:white ;
+
+}
+
+.mySwiper-right{
+    width: 30%;
+    height: 100vh;
+    padding:16% 6%;
+    color:white ;
+}
+
+.mySwiper-left-2{
+    width: 30%;
+    height: 100vh;
+    padding:8% 10%;
+    font-family: 'Fonseca';
+    text-transform: initial;
+    color:white ;
+
+}
+
+.mySwiper-right-2{
+    width: 70%;
+    height: 100vh;
+    padding:8% 6%;
+    color:white ;
+}
+
+.mySwiper-left-3{
+    width: 70%;
+    height: 100vh;
+    padding:8% 10%;
+    font-family: 'Fonseca';
+    text-transform: initial;
+    color:white ;
+
+}
+
+.mySwiper-right-3{
+    width: 30%;
+    height: 100vh;
+    padding:8% 6%;
+    color:white ;
+}
+
+.mySwiper-cta{
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+.mySwiper-cta a{
+    margin-left: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 120%;
+    color: white;
+    text-decoration: none; 
+    transition: all 0.2s ease-in-out; 
+    border-bottom: 2px solid transparent; 
+}
+
+
+.mySwiper-cta i{
+    font-size: x-large;
+    border-radius: 50px;
+    border: 2px solid white;
+    padding: 10px;
+    color: white;
+}
+
+.mySwiper-cta:hover{
+    transform: scale(1.1);
+    translate: 3rem;
+}
+
+.mySwiper-cta a:hover{
+    color: white;
+}
+
+.mySwiper-cta:hover a{
+    border-bottom: 1px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+.mySwiper-slide-text{
+    top: 90vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    height: 10vh;
+    position: relative;
+    z-index: 400000000;
+    padding: 0 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.conciergerie-main-bottom-section{
+    border-left:2px solid white;
+    width: 25%;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-transform: uppercase;
+}
+
+.conciergerie-main-bottom-section a {
+    color: white;
+    font-size: 120%;
+    transition: all 0.4 ease;
+}
+
+.conciergerie-main-bottom-section :hover {
+ color: rgb(16, 153, 158);
+ font-weight: 600;
+}
+
+
+.mySwiper-slide h1{
+    font-size: 300%;
+    color: rgba(0, 0, 0, 0);
+    text-align: left;
+    z-index: 3000;
+    font-weight: 900;
+    -webkit-text-stroke: 3px white;
+}
+
+
+
+.mySwiper-slide h2{
+    font-size: 300%;
+    color: rgba(0, 0, 0, 0);
+    text-align: left;
+    z-index: 3000;
+    font-weight: 900;
+    -webkit-text-stroke: 3px white;
+}
+
+#mySwiper-slide-1{
+    background-image: url('../images/parallax/parallax-6.JPG');
+}
+
+#mySwiper-slide-2{
+
+    background-image: url('../images/parallax/parallax-4.JPG');
+}
+
+#mySwiper-slide-3{
+    background-image: url('../images/parallax/parallax-2.JPG');
+}
+
+#mySwiper-slide-4{
+    background-image: url('../images/parallax/parallax-11.JPG');
+}
+
+.swiper-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(70, 70, 70, 0.60); /* Couleur d'arrière-plan semi-transparente */
+}
+
+
+
+  .custom-cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none; /* Empêcher le curseur personnalisé de bloquer les interactions avec les éléments */
+    transition: opacity 0.3s ease;
+    opacity: 1; /* Opacité par défaut */
+  }
+
 
 h1,
 .h2,
@@ -58,6 +368,7 @@ h6 {
     letter-spacing: 2px;
     font-weight: 600;
     text-transform: uppercase;
+    color: #616161;
 }
 
 .minimal-page-loader {
@@ -121,6 +432,15 @@ a:hover {
 	  transition: all 0.3s ease-in-out;
 }
 
+.conciergerie-quote-title{
+    font-size: 200%;
+}
+
+.conciergerie-double-section{
+    display: flex;
+    flex-direction: row;
+}
+
 
 /* ================================= */
 /* ::::::::::: 2. Header ::::::::::: */
@@ -128,22 +448,21 @@ a:hover {
 
 /* header bis */
 
+
 nav {
     display: flex;
     width: 100%;
     align-items: center;
     flex-wrap: wrap;
     padding: 5px 0;
-    position: relative;
-    left: 10%;
+    /* position: static !important; */
     z-index: 1000;
 }
 
-nav ul {
-    flex: 1;
-    text-align: right;
-    padding-right: 270px;
+.conciergerie-dark-nav li a{
+    color: rgb(16, 153, 158) !important;
 }
+
 
 nav ul li {
     display: inline-block;
@@ -154,24 +473,46 @@ nav ul li {
 nav ul li a {
     color: #000;
     text-decoration: none;
-    position: relative;
+    position: static;
     text-transform: uppercase;
     font-size: 14px;
-    color: black !important;
+    color: white;
+    font-weight: 500; 
+}
+
+nav ul li a:hover{
+    color: white;
 }
 
 .next-section{
-    background-color: black;
+    background-color: #616161;
     margin: auto;
     text-align: center;
-    width: 30px;
+    width: 40px;
     border-radius: 50px;
     position: relative;
-    bottom: 20vh;
 }
+
+
+
+#voir-plus{
+   margin-top: 10vh;
+}
+
+.next-section-masonry{
+    position: relative;
+top: 30vh;
+    z-index: 677373737737373737;
+}
+
 
 .next-section i{
     color: white;
+}
+
+.next-section-who-we-are{
+    position: relative;
+    bottom: 10vh;
 }
 
 .close-swiper{
@@ -205,7 +546,7 @@ nav ul li a::after {
     bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
-    background: #ff3131;
+    background:rgb(16, 153, 158);
     transition: width 0.4s;
 }
 
@@ -215,132 +556,199 @@ nav ul li a:hover::after {
 
 .conciergerie-hamburger-menu {
     position: fixed;
-    right: 30px;
+    left:93% ;
+    top: 30vh;
+    width: 1rem;
+    height: 12vh;
+    margin: 4%;
     font-size: 120%;
+    z-index: 400000000000000000000 !important;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    width: 5rem;
+    color: rgb(16, 153, 158);
 }
+
+.conciergerie-hamburger-menu i{
+    font-size: 130%;
+    -webkit-text-stroke: #e0e0e0;
+}
+
 
 .conciergerie-logo {
     position: fixed;
-    top: 22px;
+    top: 12px;
     left: 80px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.conciergerie-main-nav{
-    /* background-color: rgba(0, 0, 0, 0); */
-    position: relative;
-    top: 1vh;
+.conciergerie-logo img{
+    max-width: 9%;
 }
-/* /Header bis */
 
-/* burger menu */
+.conciergerie-main-nav{
+    position: relative;
+    left: 20rem;
+}
 
-.sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 15%;
-    height: 100vh;
-    background: black;
-    z-index: 998;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-out;
-    border-left: 2px solid black;
-    color: white !important;
-  }
 
-  .sidebar a {
-    color: white !important;
-  }
-
-  .sidebar ul {
-    margin: 0;
-    margin-top: 10vh !important;
+.conciergerie-main-p{
+    width: 50%;
+    left:43%;
+    height: 40vh;
+    position: relative;
+    top: 45%;
+    font-size: 150%;
     padding: 0;
-    list-style-type: none;
+    /* text-align: center; */
+}
+
+.conciergerie-main-btn{
+    text-align: center !important;
+}
+
+.conciergerie-main-btns{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.conciergerie-main-btns a{
+    color: rgb(16, 153, 158);
+    background-color: white;
+    height: 5vh;
+    width: 30%;
+    margin-top: 5%;
+    border-radius: 5px;
+    /* margin-left: 18%;
+    margin-right: 18%; */
+    transition: 0.3s ease-in-out;
+    font-weight: 700;
+    padding-top: 5px;
+    font-size: 70%;
+    text-transform: uppercase;
+}
+
+.conciergerie-main-btns a:hover{
+
+    color: white;
+    background-color:  rgb(16, 153, 158);
+}
+
+
+
+.conciergerie-second-title{
+    color:white !important;
+
+}
+
+
+
+.conciergerie-main-titles span{ 
+    font-size: 110%;
+}
+
+.conciergerie-main-title-logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.conciergerie-logo-txt{
     display: flex;
     flex-direction: column;
-
-  }
-
-  .sidebar.open ~ .site-header {
-    display: none;
-  }
-  
-  .sidebar li {
-    margin-bottom: 4vh;
-  }
-
-
-  .phone-block {
-    display: none;
-  }
-
-  #phone-icon{
-    position: relative !;
-    left: 2rem !important;
-  }
-
-  .page-content{
-    opacity: 0.5;
-    pointer-events: none;
-  }
-  
-  .sidebar.open {
-    transform: translateX(0);
-  }
-
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
-  }
-
-  #second-sidebar {
-    display: none; /* Cachée initialement */
-    top: 0;
-    right: 12.7rem;
-    width: 120%;
-    height: 100vh;
-    background: black;
-    z-index: 999;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-out;
-    border-left: 2px solid black;
-    color: white;
-    padding: 0 2%;
-    font-size: x-small;
-
-  }
-
-
-  @keyframes sidebar-appear {
-    0% {
-      opacity: 0;
-      right: -20%;
-    }
-    100% {
-      opacity: 1;
-      right: 0;
-    }
-  }
-
-  .contacts-infos{
     position: relative;
-    top: 20vh;
-  }
+    right: 28rem;
+    font-weight: 200;
+    border-left: 1px solid white;
+    text-align: left;
+    vertical-align: middle;
+
+}
+
+.conciergerie-logo-txt p{
+    position: relative;
+    top: 1vh;
+    color: white !important;
+    margin-left: 4px;
+}
+
+.conciergerie-logo-txt span{
+    position: relative;
+    bottom: 1vh;
+    font-size: 70%;
+    color: white;
+    margin-left: 4px;
+}
+
+.conciergerie-logo-img{
+    max-width: 20%;
+}
+
+.conciergerie-logo{
+    display: flex;
+    flex-direction: row;
+}
+
+.conciergerie-main-titles h1{
+    color: white !important;
+    margin: auto;
+    text-align: center;
+    font-size: x-large;
+}
+
+.conciergerie-main-titles h3{
+    text-align: center;
+    color: black;
+    -webkit-text-stroke: #000;
+    font-size: 80%;
+    margin-top: 2%;
+}
+
+
+.conciergerie-small-nav-ul{
+    list-style:none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 40px;
+    width: 25%;
+    position: relative;
+    bottom: 20vh;
+    display: none;
+}
+
+.conciergerie-small-nav-link{
+    font-size: 90%;
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    color: white;
+    /* color: rgba(0, 0, 0, 0); */
+    /* -webkit-text-stroke:0.8px  white; */
+    transition: 0.3s ease;
+}
+
+.conciergerie-small-nav-link::before{
+    background-color: #ff0000; /* Couleur du carré */
+    -webkit-text-stroke: 1px #000000; /* Propriété -webkit-text-stroke */
+}
+
+.conciergerie-small-nav-link:hover{
+    color: rgb(16, 153, 158);
+    -webkit-text-stroke:0.8px ;
+    text-decoration: underline;
+}
+
+
+/* /Header bis */
+
 
 
   .contact-item{
     margin-top: 8vh;
+    color: rgb(16, 153, 158);
   }
 
   .coordonates{
@@ -348,9 +756,49 @@ nav ul li a:hover::after {
     line-height: 4px;
   }
 
+  .block-thanks{
+    position: absolute;
+    width:100% !important;
+    padding: 20vh 5rem;
+    background-color: rgba(255, 255, 255, 0.88) !important;
+    z-index: 2000000;
+    margin: 20%;
+    text-align: center;
+
+  }
+
+  .conciergerie-btn-thanks{
+
+  }
+
+  .block-thanks img{
+    max-width: 20%;
+    position: relative;
+    bottom: 8vh;
+  }
+
+  .overlay-thanks{
+    width: 100%;
+    opacity: 0.7;
+    height: 100vh;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    top: 0;
+  }
+
+  #conciergerie-section-thanks{
+    background-image: url('../images/parallax/parallax-14.JPG');
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .contacts-infos h5{
     font-size: 80%;
     font-weight: 800;
+    color: rgb(16, 153, 158);
   }
   
   .close-icon-second {
@@ -362,34 +810,6 @@ nav ul li a:hover::after {
   }
   
 
-/* .conciergerie-header {
-    height: 70px;
-    z-index: 999;
-    width: 100%;
-    margin-top: 25px;
-    position: fixed;
-    transition: opacity 0.5s ease-in-out;
-    background-color: rgba(255, 255, 255, 0);
-    position: relative;
-    top: 0;
-    
-} */
-
-
-/* header .logo {
-    font-size: 17px;
-    font-weight: 600;
-    padding-top: 13px;
-    font-family: Dosis, Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    display: inline-block;
-    letter-spacing: 2px;
-}
-
-header .logo a {
-    text-decoration: none;
-} */
-
 .parallax {
     position: relative;
     background-size: cover;
@@ -399,6 +819,7 @@ header .logo a {
     height: 630px;
     margin-bottom: 60px;
     margin-top: -185px;
+    background-color: rgba(0, 0, 0, 0.38);
 }
 
 .parallax .info {
@@ -409,194 +830,17 @@ header .logo a {
     position: absolute;
 }
 
-.parallax .info h2 {
-    font-weight: 400;
+.parallax .info h1 {
+    font-weight: 600;
     font-size: 2.4em;
-    color: #000;
     letter-spacing: 0.40em;
     text-transform: uppercase;
     display: table-cell;
     vertical-align: middle;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.58);
 }
 
-/* nav {
-    float: right;
-    height: 50px;
-    margin-top: -3px;
-    padding-top: 0;
-    display: block;
-    margin-right: -8px;
-
-} */
-
-/* .icon-mobile {
-    display: none;
-}
-
-.slicknav_menu {
-    display: none;
-} */
-
-/* #glacier_menu,
-#glacier_menu ul,
-#glacier_menu li,
-#glacier_menu a {
-    border: none;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-} */
-
-/* #glacier_menu {
-    height: 37px;
-    display: block;
-    padding: 0;
-    margin: 0;
-    width: auto;
-}
-
-#glacier_menu>ul>li.active>ul>li a {
-    color: #fff!important;
-}
-
-#glacier_menu>ul {
-    list-style: inside none;
-    padding: 0;
-    margin: 0;
-}
-
-#glacier_menu>ul>li {
-    list-style: inside none;
-    float: left;
-    display: block;
-    padding: 0;
-    position: relative;
-    margin: 23px 20px 11px 14px;
-    padding-bottom: 14px;
-}
-
-#glacier_menu>ul>li>a {
-    outline: none;
-    display: block;
-    position: relative;
-    margin: 0;
-    z-index: 999;
-    color: #000;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: "Dosis", sans-serif;
-    letter-spacing: 2px;
-    font-weight: 400;
-    font-size: 12px;
-}
-
-#glacier_menu>ul>li>a:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    display: inline-block;
-    height: 1px;
-    width: 100%;
-    border-bottom: 1px solid;
-    margin-top: 15px;
-    opacity: 0;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: scale(0, 1);
-    transform: scale(0, 1);
-}
-
-#glacier_menu > ul > li > a span {
-    margin-right: -2px;
-    display: inline-block;
-}
-
-#glacier_menu>ul>li>a:hover:after {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-
-#glacier_menu>ul>li.active>a:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    display: inline-block;
-    height: 1px;
-    width: 100%;
-    border-bottom: 1px solid;
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-
-#glacier_menu ul li.has-sub:hover>ul {
-    visibility: visible;
-    opacity: 1;
-    -webkit-transform: translateY(-0%);
-    -moz-transform: translateY(-0%);
-    -ms-transform: translateY(-0%);
-    -o-transform: translateY(-0%);
-    transform: translateY(-0%);
-    -webkit-transition: opacity 0.3s 0s, visibility 0s 0s, -webkit-transform 0.3s 0s;
-    -moz-transition: opacity 0.3s 0s, visibility 0s 0s, -moz-transform 0.3s 0s;
-    transition: opacity 0.3s 0s, visibility 0s 0s, transform 0.3s 0s;
-}
-
-#glacier_menu ul li>ul {
-    visibility: hidden;
-    opacity: 0;
-    width: auto;
-    padding: 12px 0 12px 0;
-    position: absolute;
-    top: 24px;
-    background: #000000;
-    z-index: 999;
-    -webkit-transform: translateY(10%);
-    -moz-transform: translateY(10%);
-    -ms-transform: translateY(10%);
-    -o-transform: translateY(10%);
-    transform: translateY(10%);
-    -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s, -webkit-transform 0.3s 0s;
-    -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s, -moz-transform 0.3s 0s;
-    transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s;
-}
-
-#glacier_menu ul li>ul {
-    width: 200px;
-}
-
-#glacier_menu ul li>ul li {
-    display: block;
-    list-style: inside none;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    padding: 7px 25px;
-}
-
-#glacier_menu ul li ul ul {
-    left: 200px;
-    top: 0;
-}
-
-#glacier_menu ul li>ul li a {
-    outline: none;
-    position: relative;
-    margin: 0;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: #ffffff;
-    text-decoration: none;
-    font-family: "Dosis", sans-serif;
-    letter-spacing: 2px;
-    font-weight: 400;
-    font-size: 11px;
-} */
 
 
 /* ================================= */
@@ -858,7 +1102,7 @@ header .logo a {
     color: #ffffff;
     border: none;
     font-size: 11px;
-    background: rgb(0, 0, 0);
+    background: rgba(16, 153, 158);
     border-radius: 0;
     margin-top: 5px;
     display: block;
@@ -1435,7 +1679,7 @@ a.cbp-l-loadMore-link:hover {
     color: #ffffff;
     border: none;
     font-size: 11px;
-    background: rgb(0, 0, 0);
+    background: rgba(16, 153, 158);
     border-radius: 0;
     margin-top: 5px;
     display: block;
@@ -2027,6 +2271,11 @@ li.comment {
       background-position: center;
     }
 
+    .mySwiper{
+        margin: 0 5rem;
+    }
+
+
     .flat-mySwiper2 {
       height: 80%;
       width: 100%;
@@ -2145,11 +2394,14 @@ footer a:focus {
 
 
 
+
 /* =============================== */
 /* ::::::::: 7. Elements ::::::::: */
 /* =============================== */
 
 /* 1 - Solution homepage */
+
+
 
 .solutions-container{
     display: flex;
@@ -2158,27 +2410,60 @@ footer a:focus {
 }
 
 .solution-container{
-    width: 30%;
-    border: 2px solid  black;
-    height: 40vh;
-    transition: 0.3s ease-in-out;
+    margin: 10%;
+    background-color: rgba(255, 255, 255, .97);
+    transition: 0.5s ease-in-out;
+    margin-bottom: 5vh !important;
+    cursor: pointer;
+    color:rgb(16, 153, 158) ;
+    height: 50%;
+    border-radius: 2px;
 }
+
+.solution-container h4{
+    font-size: 100%;
+    color: rgb(16, 153, 158);
+    transition:all 0.3s ease;
+    font-weight: 600;
+
+}
+
+.solution-container-img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30%;
+    height: 44vh;
+    /* border: 2px solid  black; */
+    text-align: center;
+    border-radius: 2px;
+}
+
+#solution-container-background-img-1{
+    background-image: url('../images/parallax/parallax-&.JPG');
+}
+
+#solution-container-background-img-2{
+    background-image: url('../images/parallax/parallax-5.JPG');
+}
+
+#solution-container-background-img-3{
+    background-image: url('../images/parallax/parallax-2.JPG');
+}
+
 
 .solution-container:hover{
-    background-color: #000;
-    color: white;
+    background-color: rgb(16, 153, 158);
+    color: white !important;
 }
 
-.solution-container h4{
-    height: 30vh;
-    padding: 5%;
-    font-size: medium;
+.solution-container:hover h4{
+    color:white
 }
 
-.solution-container h4{
-    height: 30vh;
-    padding: 5%;
-    font-size: small;
+
+
+#solution-container-3{
+    margin-bottom: 20% !important;
 }
 
 .container-contact{
@@ -2224,6 +2509,7 @@ footer a:focus {
 }
 
 
+
 /* button */
 
 input[type='submit'],
@@ -2233,7 +2519,7 @@ button {
     text-transform: uppercase;
     text-decoration: none;
     font-size: 11px;
-    background: #000;
+    background: rgba(16, 153, 158);
     border: none;
     font-weight: 400;
     font-family: "Dosis", sans-serif;
@@ -2248,6 +2534,10 @@ input[type='submit']:focus,
 button:focus {
     border: none;
     outline: none;
+}
+
+.conciergerie-btn{
+    background-color: rgba(16, 153, 158) !important;
 }
 
 
@@ -2337,6 +2627,15 @@ button:focus {
 #zoom-in:hover,
 #zoom-out:hover {
     background-color: #000000;
+}
+
+/* Conciergerie Masonry */
+
+.conciergerie-section-masonry-title{
+    text-align: center;
+    margin-top: 5vh;
+    /* position: relative;
+    top: 10vh; */
 }
 
 
@@ -2541,7 +2840,452 @@ h3.title-section:after {
 }
 
 
+.swiper {
+    margin-top: -10vh;
+    width: 90%;
+    height: 500px;
+  }
+
+.swiper-container{
+  width: 30rem;
+  height: 60vh;
+  border-radius: 2px;
+  text-align: center;
+  padding: 2%;
+  background-color: rgb(239, 239, 239);
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  cursor: grab;
+  font-size: small;
+  transition: 0.3s ease-in-out;
+  /* box-shadow: 0px 5px 6px 6px rgba(186,186,186,0.75);
+  -webkit-box-shadow: 0px 5px 6px 6px rgba(186,186,186,0.75);
+  -moz-box-shadow: 0px 5px 6px 6px rgba(186,186,186,0.75); */
+  
+}
+
+
+.swiper-container h2{
+    font-size: small;
+}
+
+.swiper-container:hover{
+    background-color: #000;
+    color: white;
+}
+
+.swiper-header{
+    height: 20vh;
+}
+
+.swiper-container button{
+    position: relative;
+    bottom: 5vh;
+    border: 1px solid white;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+}
+
+.swiper-button-prev, .swiper-button-next{
+    color: black !important; /* Remplacez "xxxxxx" par le code de couleur hexadécimal de votre choix */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: black !important; /* Remplacez "xxxxxx" par le code de couleur hexadécimal de votre choix */
+}
+
+
+.swiper-slide-masonry {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: grab;
+  }
+
+
+  .swiper-slide-masonry h3{
+    font-size: 80%;
+  }
+  
+  .swiper-slide-masonry::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 1); /* Couleur de fond semi-transparente */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .swiper-slide-masonry:hover::after {
+    opacity: 1;
+  }
+  
+  .swiper-slide-masonry:hover {
+    background-size: 190%; /* Applique un zoom de 1.2 (20% de zoom) */
+    transition: transform 0.3s ease;
+  }
+
+  .swiper-wrapper h3{
+    font-size: 82%;
+    font-weight: 800;
+  }
+
+  .swiper-wrapper p{
+    font-size: 80%;
+    top: 42%;
+  }
+
+
+  .slide-content {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 0 2%;
+    color: white;
+
+  }
+
+  .swiper-slide:hover .slide-content {
+    opacity: 1;
+  }
+
+
+
+.swiper-slide-masonry:hover::after {
+    opacity: 0.2;
+  }
+
+.conciergerie-btn-masonry{
+    position: relative;
+    top: 25vh;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.conciergerie-btn-masonry button{
+    margin: auto !important;
+    width:20%;
+}
+
+#swiper-slide-1{
+    background-image: url('../images/flat-img/flat-1/flat-1.png');
+}
+
+
+#swiper-slide-2{
+    background-image: url('../images/flat-img/flat-2/flat-1.webp');
+}
+
+#swiper-slide-3{
+    background-image: url('../images/flat-img/flat-3/flat-1.webp');
+}
+
+#swiper-slide-4{
+    background-image: url('../images/flat-img/flat-4/flat-1.webp');
+}
+
+#swiper-slide-5{
+    background-image: url('../images/flat-img/flat-5/flat-1.webp');
+}
+
+#swiper-slide-6{
+    background-image: url('../images/flat-img/flat-6/flat-1.webp');
+}
+
+#swiper-slide-7{
+    background-image: url('../images/flat-img/flat-7/falt-1.webp');
+}
+
+#swiper-slide-8{
+    background-image: url('../images/flat-img/flat-8/flat-1.webp');
+}
+
+#swiper-slide-9{
+    background-image: url('../images/flat-img/flat-9/flat-1.webp');
+}
+
+#swiper-slide-10{
+    background-image: url('../images/flat-img/flat-10/flat-1.webp');
+}
+
+#swiper-slide-11{
+    background-image: url('../images/flat-img/flat-11/flat-1.webp');
+}
+
+#swiper-slide-12{
+    background-image: url('../images/flat-img/flat-12/flat-1.webp');
+}
+
+#swiper-slide-13{
+    background-image: url('../images/flat-img/flat-13/flat-1.webp');
+}
+
+#swiper-slide-14{
+    background-image: url('../images/flat-img/flat-14/flat-1.webp');
+}
+
+#swiper-slide-15{
+    background-image: url('../images/flat-img/flat-15/flat-1.webp');
+}
+
+
+
+
+.swiper-2{
+    width:100%;
+    height: 100vh;
+}
+
+.swiper-slide{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+  .header-hidden {
+    display: none;
+  }
+
+
+.solution-wrapper{
+    background-color:rgba(255, 255, 255, 1);
+    width: 80%;
+    margin: auto;
+    margin-top: 10vh !important;
+    padding: 4%;
+}
+
+/* ================================ */
+/* :::::: 7.1.2 Preloader::::::: */
+/* ================================ */
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 9999;
+    animation: fadeOut 2s ease-in-out forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+  
+  .spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 4px solid #fff;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  #myVideo {
+    display: none;
+  }
+  
+
+/* ================================ */
+/* :::::: 7.2.1 Swiper first slide::::::: */
+/* ================================ */
+main{
+    overflow: hidden;
+    height: 90vh;
+}
+
+.conciergerie-main-content{
+    width: 100%;
+    height: 100vh;
+}
+/* 
+.line-one{
+    position: absolute !important;
+    top:0;
+    left: 20%;
+    width: 14px;
+    height: 100vh;
+    background-color: white;
+}
+
+.line-two{
+    position: absolute !important;
+    top:0;
+    left: 21.5%;
+    width: 11px;
+    height: 100vh;
+    background-color: white;
+} */
+
+
+
+
+.conciergerie-main-button a {
+    position: relative;
+    text-decoration: none;
+    bottom: 260px;
+    right: -57%;
+    text-transform: uppercase;
+    background: #ff3131;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: .4s;
+}
+
+.conciergerie-main-button a:hover {
+    background: #000;
+    color: #fff;
+}
+
+.conciergerie-year {
+    font-weight: 700;
+    position: fixed;
+    top: 556px;
+    left: 110px;
+    padding: 10px 30px;
+}
+
+.conciergerie-media ul {
+    list-style: none;
+    position: fixed;
+    right: 20px;
+    top: 63%;
+    padding: 10px 10px;
+}
+
+.conciergerie-media ul li {
+    cursor: pointer;
+    font-size: 18px;
+    margin: 24px 0;
+    transition: .3s;
+}
+
+.conciergerie-media ul li:hover {
+    transform: scale(1.8);
+}
+
+/* ================================ */
+/* :::::: 7.1.1 Conciergerie section who we are ::::::: */
+/* ================================ */
+#conciergerie-section-who-we-are{
+    height: 100vh;
+    z-index: 2000 !important;
+    background-image: url("../images/flat-img/flat-6/flat-1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.left-swiper-block{
+    background-color: rgba(255, 255, 255, .99);
+    padding:12% 6%;
+    width: 60% !important;
+    height: 100vh;
+    position: relative;
+    top: 0vh;
+    left: 0;
+}
+
+.right-swiper-block{
+    background-color: rgba(255, 255, 255, 0);
+    padding: 4%;
+    width: 40% !important;
+    height: 100vh;
+}
+
+.conciergerie-text{
+    text-align: center;
+    padding: 10% 8% !important;
+}
+
+
+#conciergerie-quote-title-who-we-are h2{
+    font-size: 100% !important;
+    width: 80%;
+    line-height: 40pxpx;
+    padding-top: 10%;
+    margin: auto;
+    color: rgba(0, 0, 0, 0);
+    /* position: relative;
+    bottom: 9vh;
+    right: 10rem; */
+    -webkit-text-stroke:2px rgb(16, 153, 158)
+}
+
+/* ================================ */
+/* :::::: 7.1.2 Conciergerie section contact us ::::::: */
+/* ================================ */
+
+.conciergerie-section-contact{
+    height: 100vh;
+    z-index: 20000 !important;
+    /* background-color: rgba(229, 229, 229, 0.98); */
+    background-image: url('../images/flat-img/flat-4/flat-2.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-repeat: cover;
+}
+
+
+#conciergerie-quote-title-contact{
+    padding: 2% ;
+    box-shadow: inset;
+    width: 40%;
+}
+
+#conciergerie-quote-title-contact h2{
+    font-size: 110% !important;
+    margin: auto;
+    width: 100%;
+    color: rgba(0, 0, 0, 0);
+    /* position: relative;
+    bottom: 9vh;
+    right: 10rem; */
+    -webkit-text-stroke:2px white
+}
 /* Contact form */
+
+
+
+.contact-form{
+    width: 40% !important;
+    height: 100vh;
+    padding: 10% 2%;
+}
 
 .contact-form p {
     margin-bottom: 10px;
@@ -2602,6 +3346,13 @@ h3.title-section:after {
     background-color: #000;
 }
 
+.allrights{
+    position: absolute;
+    bottom: 0;
+    color: white !important;
+    font-size: 50%;
+}
+
 .contact-form {
     background: #FFF;
     width: 100%;
@@ -2658,267 +3409,53 @@ h3.title-section:after {
     position: relative;
 }
 
-.swiper {
-    width: 90%;
-    height: 500px;
+/* ================================ */
+/* :::::: 7.1.3 Conciergerie solution caroussel active ::::::: */
+/* ================================ */
+.conciergerie-solution-carousel {
+    display: flex;
+    /* overflow: hidden; */
+
   }
 
-.swiper-container{
-  width: 30rem;
-  height: 60vh;
-  border-radius: 2px;
-  text-align: center;
-  padding: 2%;
-  background-color: rgb(239, 239, 239);
-  color: black;
-  border: 1px solid rgba(0, 0, 0, 0.7);
-  cursor: grab;
-  font-size: small;
-  transition: 0.3s ease-in-out;
-  /* box-shadow: 0px 5px 6px 6px rgba(186,186,186,0.75);
-  -webkit-box-shadow: 0px 5px 6px 6px rgba(186,186,186,0.75);
-  -moz-box-shadow: 0px 5px 6px 6px rgba(186,186,186,0.75); */
   
-}
-
-
-.swiper-container h2{
-    font-size: small;
-}
-
-.swiper-container:hover{
-    background-color: #000;
-    color: white;
-}
-
-.swiper-header{
-    height: 20vh;
-}
-
-.swiper-container button{
-    position: relative;
-    bottom: 5vh;
-    border: 1px solid white;
-    transition: 1s ease-in-out;
-    cursor: pointer;
-}
-
-.swiper-button-prev, .swiper-button-next{
-    color: black !important; /* Remplacez "xxxxxx" par le code de couleur hexadécimal de votre choix */
-}
-
-.swiper-pagination-bullet-active {
-    background-color: black !important; /* Remplacez "xxxxxx" par le code de couleur hexadécimal de votre choix */
-}
-
-
-.swiper-container button:hover{
-    background-color: white;
-    color: #000;
-}
-
-
-.swiper-2{
-    width:100%;
-    height: 92.5vh;
-}
-
-.swiper-slide{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-}
-
-.swiper-slide-1 {
-    position: relative;
+  .conciergerie-solution-carousel-item {
+    flex: 0 0 100%;
+    transform: scale(0.9);
+    transition: transform 0.5s;
+    width: 15rem !important;
+    height: 39vh;
+    transition: all 0.7s ease-in-out;
+    border-radius: 5px;
   }
 
-
-  .header-hidden {
-    display: none;
+  .conciergerie-solution p{
+    font-size: 80%;
   }
 
-#swiper-slide-1{
-    background-image: url('../images/parallax/parallax.JPG');
-    overflow: hidden !important;
+  .conciergerie-solution-carousel-item:hover {
+    transform: scale(0.94);
+  }
 
-}
-
-#swiper-slide-2{
-    background-color:rgb(255, 255, 255);
-    height: auto;
-    overflow-y: scroll;
-}
-
-#swiper-slide-3{
-    background-image: url('../images/parallax/parallax-2.JPG');
-}
-
-#swiper-slide-4{
-    background-image: url('../images/parallax/parallax-6.JPG');
-}
-
-.solution-wrapper{
-    background-color:rgba(255, 255, 255, 1);
-    width: 80%;
-    margin: auto;
-    margin-top: 10vh !important;
-    padding: 4%;
-}
-
-#swiper-slide-5{
-    background-image:url('../images/parallax/parallax-4.JPG');
-}
-
-#swiper-slide-6{
-    background-color:rgb(255, 255, 255);
-}
-/* ================================ */
-/* :::::: 7.1.2 Preloader::::::: */
-/* ================================ */
-
-.preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
+  .swiper-3{
+    position: relative;
+    /* margin-bottom: 100px; */
     width: 100%;
-    height: 100%;
-    background-color: #000;
-    z-index: 9999;
-    animation: fadeOut 2s ease-in-out forwards;
-  }
-  
-  @keyframes fadeOut {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      display: none;
-    }
-  }
-  
-  .spinner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    border: 4px solid #fff;
-    border-top: 4px solid #3498db;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-      transform: translate(-50%, -50%) rotate(360deg);
-    }
-  }
-  
-  #myVideo {
-    display: none;
-  }
-  
-
-/* ================================ */
-/* :::::: 7.2.1 Swiper first slide::::::: */
-/* ================================ */
-main{
     overflow: hidden;
-}
-
-.conciergerie-main-content{
-    width: 100%;
-    height: 100vh;
-}
-.line-one {
-    position: fixed;
-    width: 15px;
-    height: 100vh;
-    background: rgb(233, 233, 233);
-    left: 23%;
-}
-
-.line-two {
-    position: fixed;
-    width: 25px;
-    height: 100vh;
-     background: rgb(204, 204, 204);
-    left: 25%;
-}
-
-.conciergerie-main-title {
-    position: fixed;
-    position: absolute;
-    top: 276px;
-    left: 43%;
-    line-height: .5;
-    font-size: 100px;
-    font-weight: 700;
-    letter-spacing: -6px;
-}
-
-.conciergerie-main-title p {
-    font-size: 25px;
-    font-weight: 300;
-    color: grey;
-    text-transform: uppercase;
-    left: 150px;
-    letter-spacing: 10px;
-}
-
-.conciergerie-main-button a {
-    position: relative;
-    text-decoration: none;
-    bottom: 260px;
-    right: -57%;
-    text-transform: uppercase;
-    background: #ff3131;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 4px;
-    transition: .4s;
-}
-
-.conciergerie-main-button a:hover {
-    background: #000;
-    color: #fff;
-}
-
-.conciergerie-year {
-    font-weight: 700;
-    position: fixed;
-    top: 556px;
-    left: 110px;
-    padding: 10px 30px;
-}
-
-.conciergerie-media ul {
-    list-style: none;
-    position: fixed;
-    right: 20px;
-    top: 63%;
-    padding: 10px 10px;
-}
-
-.conciergerie-media ul li {
-    cursor: pointer;
-    font-size: 18px;
-    margin: 24px 0;
-    transition: .3s;
-}
-
-.conciergerie-media ul li:hover {
-    transform: scale(1.8);
-}
+  }
 
 
+.active-zoom {
+    transform: scale(1.1);
+  }
+
+#solution-wrapper{
+    margin: 0 4rem !important;
+}
+
+.conciergerie-solution-text-container p{
+    text-align: left !important;
+}
 /* ================================ */
 /* :::::: 7.2 Contact block ::::::: */
 /* ================================ */
@@ -2931,27 +3468,18 @@ main{
     z-index: 50000;
 }
 
-.left-swiper-block{
-    background-color: rgba(255, 255, 255, .98);
-    padding: 4%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.right-swiper-block{
-    background-color: rgba(255, 255, 255, .98);
-    padding: 4%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
 
 .conciergerie-solution h2{
     margin-top: 0%;
     margin-bottom: 2%;
+    text-align: center;
+}
+
+.conciergerie-solution p{
+    margin-top: 0%;
+    margin-bottom: 2%;
+    height: 5vh;
+    text-align: center;
 }
 
 .conciergerie-solution button{
@@ -2964,7 +3492,26 @@ main{
     padding:2% 8%;
     font-size: smaller;
     position: relative;
-    top: -30px;
+    width: 90%;
+}
+
+.solution-container-img{
+    height: 55vh;
+}
+
+.solution-wrapper{
+    margin-top: 2vh !important;
+}
+
+.conciergerie-section-solution{
+    z-index: 200;
+    background-color: white;
+    height: 100vh;
+    /* overflow-x: auto !important; */
+}
+
+.conciergerie-section-solution h2{
+    font-size: 190%;
 }
 
 .conciergerie-contact-block button{
@@ -2983,6 +3530,35 @@ main{
   font-size: 22px; /* ajuster la taille de l'icône */
   color: black;
 }
+
+.conciergerie-section-masonry{
+    height: 100vh;
+    background-color: white;
+}
+
+.carousel {
+    background: #EEE;
+    height: 80vh;
+  }
+  
+  .carousel-image {
+    display: block;
+    height: 50vh;
+    /* set min-width, allow images to set cell width */
+    min-width: 150px;
+    max-width: 100%;
+    margin-right: 10px;
+    /* vertically center */
+    top: 50%;
+    transform: translateY(-50%)
+  }
+  
+  .carousel.is-fullscreen .carousel-image {
+
+    max-height: 100%;
+  }
+  
+
 
 ion-icon{
     transition: 1s ease-in-out;
@@ -3018,16 +3594,33 @@ ion-icon:hover{
     font-size: 22px;
 }
 
+.swiper-container-masonry{
+    height: 50vh;
+}
+
+.mySwiper{
+    height: 50vh !important;
+    position: relative;
+    top: 20vh;
+    /* padding: 2% 10% !important; */
+}
+
+
 /* ================================ */
 /* :::::: 7.3 Articles ::::::: */
 /* ================================ */
 .body-articles{
     background-color: #f8f8f8;
     padding: 5% 10%;
+    overflow: scroll;
 }
 .conciergerie-container{
-    /* margin: 0 10%; */
     background-color: white;
+}
+
+.article-element h2, p {
+    font-size: larger;
+    color: #000 !important;
 }
 
 
@@ -3040,8 +3633,15 @@ ion-icon:hover{
 }
 
 
-.conciergerie-article-img-container{
+.conciergerie-article-img-container {
     width: 100%;
+    height: 40vh;
+    background-color: red;
+    margin-bottom: 5vh;
+}
+
+.conciergerie-article-img-container img {
+    max-width: 100%;
 }
 
 .conciergerie-article-link{
@@ -3109,6 +3709,20 @@ ion-icon:hover{
     transform: scale(1.03);
 }
 
+.conciergerie-about-text{
+    text-align: left !important;
+    text-align: left;
+}
+
+.conciergerie-about-text p{
+    text-align: left;
+}
+
+.conciergerie-about-title{
+    text-align: left !important
+    ;
+}
+
 /* ================================ */
 /* :::::: 7.4 Popup solutions ::::::: */
 /* ================================ */
@@ -3126,20 +3740,20 @@ ion-icon:hover{
     display: none;
   }
 
-    #popup-container {
+
+  #popup-container-1 {
     display: none;
     position: fixed;
-    top: 40%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -50%);
     width: 50%;
-    height: 80vh !important;
     margin: auto;
     z-index: 9999;
     font-size: smaller;
   }
   
-  #popup-content {
+  #popup-content{
     position: relative;
     background-color: #fff;
     padding: 20px;
@@ -3441,6 +4055,32 @@ ion-icon:hover{
 /* ================================ */
 /* :::::: 8. Responsive CSS ::::::: */
 /* ================================ */
+@media only screen and (min-width: 2478px){
+    .mySwiper-slide-text{
+        visibility: hidden;
+    }
+
+    .conciergerie-main-bottom-section a{
+        font-size: smaller;
+    }
+
+    .conciergerie-main-bottom-section{
+        margin:0 20px;
+        width: 500px;
+    }
+
+    .mySwiper-slide h1{
+        font-size: 500% !important;
+    }
+
+    .conciergerie-cta-txt{
+        font-size: 100% !important;
+    }
+
+    .mySwiper-slide h2{
+        font-size: 600% !important;
+    }
+}
 
 @media only screen and (max-width: 1478px) {
     #glacier_menu ul li ul ul {
@@ -3450,6 +4090,30 @@ ion-icon:hover{
     #glacier_menu ul li ul {
         right: 0;
     }
+    /* .mySwiper-slide-text{
+        visibility: hidden;
+    } */
+
+    .conciergerie-main-bottom-section a{
+        font-size: smaller;
+    }
+
+    .conciergerie-main-bottom-section{
+        margin:0 20px;
+        width: 500px;
+    }
+/* 
+    .mySwiper-slide h1{
+        font-size: 450% !important;
+    }
+
+    .conciergerie-cta-txt{
+        font-size: 100% !important;
+    }
+
+    .mySwiper-slide h2{
+        font-size: 350% !important;
+    } */
 }
 
 @media only screen and (max-width: 1036px) {
@@ -3497,9 +4161,6 @@ ion-icon:hover{
     }
     .partners {
         width: 100%;
-    }
-    #sidebar {
-        margin-top: 100px;
     }
     .glacier-padding-left,
     .glacier-padding-right {
@@ -3675,6 +4336,7 @@ ion-icon:hover{
        position: relative;
        right: 5rem;
     }
+
     
     [class^="label_"] {
         display: block;
@@ -3703,3 +4365,585 @@ ion-icon:hover{
          color: #fff;
          background-color: #222;
     }
+
+
+@media screen and (max-width: 575px) {
+
+    
+    #popup-container-1, #popup-container-2, #popup-container-3{
+        width: 100%;
+      }
+
+          
+      .mySwiper-slide-text{
+        visibility: hidden;
+    }
+
+    .conciergerie-main-bottom-section a{
+        font-size: smaller;
+    }
+
+    .conciergerie-main-bottom-section{
+        margin:0 20px;
+        width: 500px;
+    }
+
+    .mySwiper-slide h1{
+        font-size: 200% !important;
+    }
+
+    .conciergerie-cta-txt{
+        font-size: 100% !important;
+    }
+
+    .mySwiper-slide h2{
+        font-size: 200% !important;
+    }
+
+    /* main */
+
+    .conciergerie-main-background{
+        height: 120vh !important;
+        margin-bottom: 20vh;
+       }
+    
+
+    .conciergerie-hamburger-menu{
+        position: fixed !important;
+        top: 30% !important;
+        right: 1rem !important;
+        z-index: 4000;
+    }
+
+    .conciergerie-main-btns{
+        margin: auto;
+        position: relative;
+        bottom: 60vh;
+        flex-direction: column;
+    }
+
+    .conciergerie-main-btn{
+        margin-top: 10vh !important;
+        width: 40% !important;
+    }
+
+    .line-one, .line-two, .conciergerie-small-nav-ul{
+        display: none;
+    }
+
+    /* section solutions */
+
+
+    .conciergerie-solution p{
+        font-size: 100%;
+    }
+
+    .solution-container-img p{
+        font-size: 100%;
+    }
+
+
+    .solution-container-img{
+        margin:5vh auto;
+        width: 80%;
+        height: 50vh;
+
+    }
+
+    .solutions-container{
+        flex-direction: column;
+        margin-top: 40vh !important;
+    }
+
+    .conciergerie-block-text{
+        position: relative;
+        bottom:10vh !important
+    }
+
+    /* section masonry */
+
+    .conciergerie-btn-masonry button{
+        width: 50%;
+        font-size: x-small;
+    }
+
+    .conciergerie-section-masonry{
+        height: 120vh;
+        margin-top: 151.8vh;
+    }
+
+
+    /* section a propos */
+
+    .right-swiper-block{
+        display: none;
+    }
+
+    .left-swiper-block{
+        margin: auto;
+        width: 76%!important;
+        font-size: smaller;
+    }
+
+    /* section contact */
+
+    .conciergerie-quote-title{
+        display: none;
+    }
+
+    .contact-form{
+        width: 80% !important;
+        margin: auto;
+    }
+
+    .fullscreen-menu,.contact-fullscreen-menu {
+        width: 60% !important;
+        padding-left: 2rem;
+      }
+
+      #solution-container-background-img-1,#solution-container-background-img-2,#solution-container-background-img-3{
+        width: 80% !important;
+      }
+
+      
+    .mySwiper-slide-text{
+        width: 100%;
+    }
+
+    .conciergerie-main-bottom-section a{
+        font-size: smaller;
+    }
+
+    .conciergerie-main-bottom-section{
+        margin:0 20px;
+        width: 500px;
+    }
+
+    .mySwiper-slide h1{
+        font-size: 250%;
+    }
+
+    .mySwiper-slide h2{
+        font-size: 250%;
+    }
+
+
+
+}
+  
+  /* Pour les smartphones en orientation paysage */
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+
+    
+    #popup-container-1, #popup-container-2, #popup-container-3{
+        width: 100%;
+      }
+
+    
+      .mySwiper-slide-text{
+        width: 100%;
+    }
+
+    .conciergerie-main-bottom-section a{
+        font-size: smaller;
+    }
+
+    .conciergerie-main-bottom-section{
+        margin:0 20px;
+        width: 500px;
+    }
+
+    .mySwiper-slide h1{
+        font-size: 230% !important;
+    }
+
+    .mySwiper-slide h2{
+        font-size: 230%;
+    }
+
+    .conciergerie-main-background{
+        height: 120vh !important;
+        margin-bottom: 20vh;
+       }
+
+    .conciergerie-main-btns{
+        margin: auto;
+        position: relative;
+        bottom: 60vh;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .conciergerie-main-btn{
+        margin-top: 10vh !important;
+        width: 40% !important;
+    }
+
+    .conciergerie-solution p{
+        font-size: 140%;
+    }
+
+    .solution-container-img{
+        margin:5vh auto;
+        width: 60%;
+        height: 80vh;
+
+    }
+
+    .solutions-container{
+        flex-direction: column;
+        margin-top: 20vh !important;
+    }
+
+    /* section masonry */
+
+    .conciergerie-btn-masonry button{
+        width: 50%;
+        font-size: x-small;
+    }
+
+    
+    .conciergerie-section-masonry{
+        height: 120vh;
+        margin-top: 169.8vh;
+    }
+
+
+    /* section a propos */
+
+    .right-swiper-block{
+        display: none;
+    }
+
+    .left-swiper-block{
+        margin: auto;
+        width: 90%!important;
+        font-size: 100%;
+
+    }
+
+
+    /* section contact */
+
+    .conciergerie-quote-title{
+        display: none;
+    }
+
+    .contact-form{
+        width: 95% !important;
+        margin:10px auto;
+    }
+
+    .fullscreen-menu,.contact-fullscreen-menu {
+        width: 40% !important;
+      }
+
+      
+      #solution-container-background-img-1,#solution-container-background-img-2,#solution-container-background-img-3{
+        width: 80% !important;
+      }
+
+      
+
+
+  }
+  
+  /* Pour les tablettes */
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .mySwiper-slide-text{
+        width: 100%;
+    }
+
+    .conciergerie-main-bottom-section a{
+        font-size: smaller;
+    }
+
+    .conciergerie-main-bottom-section{
+        margin:0 20px;
+        width: 500px;
+    }
+
+    .mySwiper-slide h1{
+        font-size: 400%;
+    }
+
+    .mySwiper-slide h2{
+        font-size: 400%;
+    }
+
+    .conciergerie-main-background{
+        height: 120vh !important;
+        margin-bottom: 20vh;
+       }
+
+    .conciergerie-main-btns{
+        margin: auto;
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .conciergerie-main-btn{
+        margin-top: 7vh !important;
+        width: 50% !important;
+        font-size: 100% !important;
+        padding: 2%;
+    }
+
+    .conciergerie-solution p{
+        font-size: 140%;
+    }
+
+    .solution-container-img{
+        margin:10vh auto;
+        width: 60%;
+        height: 50vh;
+
+    } 
+
+    .solution-container-img h4{
+        font-size: large;
+    }
+
+    .solutions-container{
+        flex-direction: column;
+        margin-top: 4vh !important;
+    } 
+
+     /* section masonry */
+
+      button{
+        width: 20rem !important;
+        font-size: 140% !important;
+    }
+
+    .conciergerie-section-masonry{
+        height: 120vh;
+        margin-top: 139.8vh;
+    }
+
+     /* section a propos */
+
+     .right-swiper-block{
+        display: none;
+    }
+
+    .left-swiper-block{
+        margin: auto;
+        width: 80%!important;
+        font-size:larger;
+
+    }
+    
+    
+    /* section contact */
+
+    .conciergerie-quote-title{
+        display: none;
+    }
+
+    .contact-form{
+        width: 82% !important;
+        margin: auto;
+    }
+
+    
+  .fullscreen-menu,.contact-fullscreen-menu {
+    width: 40% !important;
+  }
+  }
+  
+  /* Pour les ordinateurs portables et les écrans de bureau */
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+
+   
+    .conciergerie-solution p{
+        font-size: 140%;
+    }
+
+    .solution-container-img{
+        margin:5vh auto;
+        width: 60%;
+        height: 70vh;
+
+    }
+
+    .solution-container-img h4{
+        font-size: large;
+    }
+
+    .solutions-container{
+        flex-direction: column;
+        margin-top: 20vh !important;
+    }
+
+    /* section masonry */
+
+    .mySwiper{
+        margin: 0 5rem;
+    }
+
+  }
+  
+  /* Pour les écrans de bureau larges et les téléviseurs */
+  @media screen and (min-width: 1200px) {
+    /* Vos styles CSS pour les écrans de bureau larges et les téléviseurs ici */
+  }
+
+  /* Fullscreen menu */
+
+
+  .fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Masquer la navigation au départ */
+    pointer-events: none; /* Désactiver les clics sur la navigation cachée */
+    transition: opacity 0.5s ease-in-out; /* Transition d'opacité */
+    z-index: 900000000;
+  }
+  
+  .fullscreen-menu.active {
+    opacity: 1; /* Afficher la navigation lorsque la classe "active" est ajoutée */
+    pointer-events: auto; /* Activer les clics sur la navigation affichée */
+  }
+  
+  .fullscreen-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .fullscreen-menu li {
+    margin: 20px;
+  }
+  
+  .fullscreen-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+
+  .fullscreen-menu a:hover {
+    color: rgb(16, 153, 158);
+  }
+
+  
+  .close-btn-fullscreen {
+    /* Le reste du style reste inchangé */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+/* Contact fullscreen */
+
+.contact-fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    pointer-events: none; /* Désactiver les clics sur la navigation cachée */
+    transition: opacity 0.5s ease-in-out; /* Transition d'opacité */
+    z-index: 900000000;
+  }
+  
+  .contact-fullscreen-menu.active {
+    opacity: 1; /* Afficher la navigation lorsque la classe "active" est ajoutée */
+    pointer-events: auto; /* Activer les clics sur la navigation affichée */
+  }
+  
+  .contact-fullscreen-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-fullscreen-menu li {
+    margin: 20px;
+  }
+  
+  .contact-fullscreen-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+
+  .contact-fullscreen-menu a:hover {
+    color: rgb(16, 153, 158);
+  }
+
+  
+  .close-btn-fullscreen-contact {
+    /* Le reste du style reste inchangé */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  
+  /* Media Query pour le menu burger */
+  @media screen and (max-width: 768px) {
+  
+    .fullscreen-menu {
+      justify-content: flex-start;
+      padding-top: 60px;
+      width: 50%;
+    }
+
+    header{
+        display: none;
+        visibility: hidden;
+    }
+
+    .conciergerie-hamburger-menu{
+        right: 2rem !important;
+    }
+  
+    .fullscreen-menu ul {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .fullscreen-menu li {
+      margin: 20px 0;
+    }
+
+    .contact-fullscreen-menu {
+        justify-content: flex-start;
+        padding-top: 60px;
+        width: 50%;
+      }
+    
+      .contact-fullscreen-menu ul {
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .contact-fullscreen-menu li {
+        margin: 20px 0;
+      }
+  }
+
+  
+  

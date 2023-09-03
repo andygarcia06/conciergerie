@@ -1,9 +1,9 @@
 {
     "articles": [
       {
+        "image": "../images/gallery-2.jpg",
         "id": "1",
         "title": "Pourquoi préférer louer son bien en location saisonnière plutôt qu'en location longue durée ?",
-        "image": "../../articles/article-1.png",
         "content1":"La location de votre bien immobilier peut être une source de revenus passive importante. Cependant, décider entre une location longue durée et une location saisonnière peut être difficile. Dans cet article, nous allons vous expliquer pourquoi la location saisonnière peut être une option plus rentable pour vous en tant que propriétaire.",
         "title2":"Une rentabilité accrue",
         "content2":"La location saisonnière peut être plus rentable que la location longue durée. En effet, les locations saisonnières sont généralement facturées à la nuitée ou à la semaine, ce qui peut générer des revenus plus élevés qu'une location longue durée. De plus, les propriétaires peuvent augmenter le prix de location saisonnière pendant les périodes de haute saison ou les événements spéciaux, augmentant ainsi encore plus leur rentabilité. En revanche, avec une location longue durée, le loyer est fixe pendant toute la durée du bail.",

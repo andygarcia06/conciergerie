@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Be My Guest - Conciergerie et gestion locative à Nice et alentours</title>
+    <!-- Balises META pour le SEO -->
+    <meta name="description" content="Be My Guest est une entreprise spécialisée dans la conciergerie sur le secteur de Nice. Nous offrons des services de haute qualité pour rendre votre séjour agréable et mémorable.">
+    <meta name="keywords" content="Be My Guest, conciergerie, Nice, services, séjour, qualité, gestion locative Nice">
+    <meta name="author" content="Be My Guest">
+            <!-- Balise Open Graph pour les réseaux sociaux -->
+    <meta property="og:title" content="Be My Guest - Conciergerie à Nice">
+    <meta property="og:description" content="Be My Guest est une entreprise spécialisée dans la conciergerie sur le secteur de Nice. Nous offrons des services de haute qualité pour rendre votre séjour agréable et mémorable.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bmg-nice-conciergerie.fr/">
+    <link rel="canonical" href="https://bmg-nice-conciergerie.fr/">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
@@ -15,477 +25,491 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- gsap -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+    <!-- Flickcity -->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+         <!-- Favicon -->
+      <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
 </head>
-<body id="index-body">
-  
-  <!-- <div class="preloader">
-    <div class="spinner"></div>
-    <video id="myVideo" preload="auto" loop muted>
-      <source src="./assets/video/picturesque-view-of-nice-france-in-the-evening-2023-04-13-06-39-37-utc.mp4" type="video/mp4">
-    </video>
+<div class="preloader-container">
+  <!-- <div class="preloader-logo">
+    <img src="./assets/images/logo/logo.png" alt="">
   </div> -->
-    <header id="home" class="conciergerie-header">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-      
-               <!-- logo -->
-               <!-- <div class="logo"><a href="index.html">CONCIERGERIE</a></div> -->
-               <!-- /logo -->
-      
-               <!-- navigation -->
-               <nav>
-                <div class="conciergerie-logo">
-                    <span>Conciergerie</span>
-                </div>
-                <ul class="conciergerie-main-nav">
-                    <li><a href="./index.html">Accueil</a></li>
-                    <li><a href="./about-us.html">About</a></li>
-                    <li><a href="./solution.html">Nos Solutions</a></li>
-                    <li><a href="./portfolio-classic.html">Nos biens</a></li>
-                    <li><a href="./blog-creative.html">Blog</a></li>
-                    <li><a href="./contact-1.html">Contact</a></li>
-                </ul>
-                <div class="conciergerie-hamburger-menu">
-                    <div class="menu-icon"><i class="fa fa-bars"></i></div>
-                    <div class="menu-icon"><i class="fa fa-phone" id="phone-icon"></i>
-                    </div>
-                </div>
-                <div class="sidebar">
-                  <span class="close-button">&times;</span>
-                  <ul>
-                    <li><a href="./index.html">Accueil</a></li>
-                    <li><a href="./about-us.html">About</a></li>
-                    <li><a href="./solution.html">Nos Solutions</a></li>
-                    <li><a href="./portfolio-classic.html">Nos biens</a></li>
-                    <li><a href="./blog-creative.html">Blog</a></li>
-                    <li><a href="./contact-1.html">Contact</a></li>
-                  </ul>
-                </div>
-                <div class="sidebar second-sidebar" id="second-sidebar">
-                  <span onclick="closeContactSideBar" class="close-icon-second">&times;</span>
-                  <div class="contacts-infos">
-                    <div class="contact-item">
-                      <h5>Quentin GUIDICELLI</h5>
-                      <div class="coordonates">
-                        <p>mail@mail.com</p>
-                        <p>+3300000000</p>
-                      </div>
-                    </div>
-                    <div class="contact-item">
-                      <h5>Anthony GASTAUD</h5>
-                      <div class="coordonates">
-                        <p>mail@mail.com</p>
-                        <p>+3300000000</p>
-                      </div>
-                    </div>
-                    <div class="contact-item">
-                      <h5>Contact 3</h5>
-                      <div class="coordonates">
-                        <p>mail@mail.com</p>
-                        <p>+3300000000</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </nav>
-               <!-- <nav class="text-light" >
-      
-                  <div id="glacier_menu">
-                      <ul>
-                      <li class="has-sub">
-                          <a href="#">
-                              <span>Accueil</span>
-                          </a>
-                      </li>
-                      <li class="has-sub">
-                          <a href="#">
-                              <span>About</span>
-                          </a>
-                          <ul>
-                              <li>
-                                  <a href="about-us.html">
-                                      <span>About us</span>
-                                  </a>
-                              </li>
-                          </ul>
-                      </li>
-                      <li class="has-sub">
-                        <a href="./solution.html">
-                            <span>Nos Solutions</span>
-                        </a>
-                    </li>
-                      
-                      <li class="has-sub">
-                          <a href="./portfolio-classic.html">
-                              <span>Nos biens</span>
-                          </a>
-                          <ul>
-                              <li class="has-sub">
-                                  <a href="./portfolio-classic.html">
-                                      <span>tous nos biens</span>
-                                  </a>
-                              </li>
-                          </ul>
-                      </li>
-                      <li class="has-sub">
-                          <a href="./blog-creative.html">
-                              <span>Blog</span>
-                          </a>
-                      </li>
-                      <li class="has-sub">
-                          <a href="./contact-1.html">
-                              <span>Contact</span>
-                          </a>
-                          </ul>
-                      </li>
-                      </ul>
-                  </div>
-      
-               </nav> -->
-               <!-- /navigation -->
-      
-      
-             </div>
-           </div>
-        </div>
-      </header>
-      <main>
-        <div class="conciergerie-main-content">
-          <div class="stripes">
-            <div class="line-one"></div>
-            <div class="line-two"></div>
-          </div>
-          <div class="conciergerie-main-title">
-            <p>Nice</p>
-            <h1>Conciergerie.</h1>
-          </div>
-          <div class="conciergerie-main-button">
-            <a href="">Contact Us</a>
-          </div>
-          <div class="conciergerie-year">
-            2023
-          </div>
-          <div class="conciergerie-media">
-            <ul>
-              <li><i class="fa fa-facebook"></i></li>
-              <li><i class="fa fa-instagram"></i></li>
-              <li><i class="fa fa-twitter"></i></li>
-            </ul>
-          </div>
-        </div>
-        <div class="next-section">
-          <a href="#swiper-2"><i class="fa fa-arrow-down"></i></a>
-        </div>
-      </main>
-        <!-- Slider main container -->
-    <div class="swiper swiper-2" id="swiper-2">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide slide-anchor" id="swiper-slide-4" data-index="0">
-          <div class="solution-wrapper conciergerie-solution">
-            <h2>NOS SOLUTIONS</h2>
-            <div class="row">
-              <a href="#home" class="close-swiper"><span >&times;</span></a>
-              <div class="col-md-12">
-                  <p>Nous proposons des solutions flexibles et personnalisées qui correspondront exactement à vos besoins tout en respectant les règlementations en vigueur à Nice.
-                  Notre priorité est de proposer aux voyageurs la meilleure expérience tout en maximisant votre rentabilité.
-                  BMG permet également aux propriétaires de réserver leur bien quand bon leur semble à des fins personnelles. 
-                  Vous pouvez donc tout simplement choisir l'option qui vous correspond le mieux, en fonction de vos préférences.</p>
-              </div>
+    <div class="loader"></div>
+</div>
 
-              <div class="solutions-container">
-                <div class="solution-container">
-                  <h4>Forfait location saisonnière </h4>
-                  <p>A partir de 20%</p>
-                </div>
-                <div class="solution-container">
-                  <h4>Forfait location moyenne durée </h4>
-                  <p>A partir de 12%</p>
-                </div>
-                <div class="solution-container">
-                  <h4>Forfait location mixte </h4>
-                  <p>Période saisonnière : A partir de 20% <br>
-                  Période Etudiante : A partir de 8%</p>
-                </div>
-              </div>
-              <button class="col-md-4 m-auto mt-5"><a style="color: white;" href="./solution.html">découvrir NOS SOLUTIONS</a></button>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide slide-anchor" id="swiper-slide-1" data-index="1">
-            <div class="row">
-              <div class="left-swiper-block col-md-6" >
-                <h3 class="text-center">WHO WE ARE ?</h3>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, necessitatibus consequatur dolorem esse laborum, neque illum recusandae soluta nemo cum doloribus. Voluptates, suscipit rerum corporis quae aperiam nesciunt iure at. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente consequatur corrupti unde deserunt ut nobis architecto culpa delectus nisi, debitis, nemo soluta fugit illo, voluptate reiciendis ratione pariatur optio est.</p>
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto beatae, nesciunt consequuntur rem, dolorum fugit ducimus deleniti iste provident, nobis ullam nihil. Hic, nihil blanditiis fugit nostrum architecto perspiciatis eos. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit atque ipsam, debitis obcaecati cupiditate illum sint eos ea molestias! Ea sunt neque aperiam ad. Quas consectetur repellat totam sint? Omnis!</p>
-                  <button><a style="color: white;" href="./about-us.html">CONTACT US</a></button>
-              </div>
-            </div>
-        </div>
-        <div class="swiper-slide slide-anchor" id="swiper-slide-2" data-index="2"> 
-                <div class="container-masonry"> 
-                  <!-- filter -->
-                  <h2 class="text-center">NOS DERNIERS BIENS</h2>
-                  <!-- <div class="portfolioFilter text-center">
-                      <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
-                      <div data-filter=".branding" class="cbp-filter-item">filtre 1</div>
-                      <div data-filter=".design" class="cbp-filter-item">filtre 2</div>
-                      <div data-filter=".illustration" class="cbp-filter-item">filtre 3</div>
-                  </div> -->
-                  <!-- /filter -->         
-                      <div class="gridywrap">
-                        <div class="gridy-2 gridyhe-1">
-                          <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-1/flat-2.webp)">&nbsp;</div>
-                          
-                          <div class="gridinfo">
-                            <h3 class="gridtitle">Grand appartement au cœur de Nice</h3>
-                            <a href="./flat-html/portfolio-single-1.html" class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
-                          </div>
-                        </div>
-                        <div class="gridy-1 gridyhe-1">
-                          <div class="gridimg" style="background-image: url(./assets//images/flat-img/flat-2/flat-1.webp)">&nbsp;</div>
-                          
-                          <div class="gridinfo">
-                            <h3 class="gridtitle">Nid douillet au cœur de la Ville </h3>
-                            <a href="./flat-html/portfolio-single-2.html" class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
-                          </div>
-                        </div>
-                        <div class="gridy-1 gridyhe-2">
-                          <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-4/flat-1.webp)">&nbsp;</div>
-                          
-                          <div class="gridinfo">
-                            <h3 class=gridtitle">Villa contemporaine dans les hauteurs de Nice</h3>
-                            </p>
-                            <a href="./flat-html/portfolio-single-3.html" class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
-                          </div>
-                        </div>
-                        <div class="gridy-2 gridyhe-1">
-                          <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-3/flat-1.webp)">&nbsp;</div>
-                          
-                          <div class="gridinfo">
-                            <h3 class="gridtitle">Grand appartement au centre de Nice </h3>
-                            <a href="./flat-html/portfolio-single-4.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
-                          </div>
-                        </div>
-                        <div class="gridy-1 gridyhe-1">
-                          <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-5/flat-1.webp)">&nbsp;</div>
-                          <div class="gridinfo">
-                            <h3 class="gridtitle">L'atelier maison - Piscine jardin et vue sur les collines de Nice</h3>
-                            <a href="./flat-html/portfolio-single-5.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
-                          </div>
-                        </div>
-                        <div class="gridy-1 gridyhe-1">
-                          <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-6/flat-1.webp)">&nbsp;</div>
-                          
-                          <div class="gridinfo">
-                            <h3 class="gridtitle">Bel appartement place Rossetti </h3>
-                            <a href="./flat-html/portfolio-single-6.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
-                          </div>
-                        </div>
-                        <div class="gridy-1 gridyhe-1">
-                            <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-7/falt-1.webp)">&nbsp;</div>
-                            
-                            <div class="gridinfo">
-                              <h3 class="gridtitle"> Charmant appartement au cœur du carre d’or </h3>
-                              <a href="./flat-html/portfolio-single-7.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
-                            </div>
-                          </div>
-                        <div class="gridy-2 gridyhe-1">
-                            <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-8/flat-1.webp)">&nbsp;</div>
-                            
-                            <div class="gridinfo">
-                              <h3 class="gridtitle">Charmant appartement proche place Massena </h3>
-                              <a href="./flat-html/portfolio-single-8.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
-                            </div>
-                          </div>
-                          <div class="gridy-1 gridyhe-2">
-                            <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-9/flat-1.webp)">&nbsp;</div>
-                            
-                            <div class="gridinfo">
-                              <h3 class="gridtitle">Magnifique appartement de luxe au sein du carre d’or </h3>
-                              <a href="./flat-html/portfolio-single-9.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
-                            </div>
-                          </div>
-              
-                          <div class="gridy-2 gridyhe-1">
-                            <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-10/flat-1.webp)">&nbsp;</div>
-                            
-                            <div class="gridinfo">
-                              <h3 class="gridtitle"> Loft au cœur de la Liberation </h3>
-                              <a href="./flat-html/portfolio-single-10.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
-                            </div>
-                          </div>
-                          
-                          <div class="gridy-1 gridyhe-1">
-                            <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-11/flat-1.webp)">&nbsp;</div>
-                            <div class="gridinfo">
-                              <h3 class="gridtitle">Grand et cosy T3 proche  jardin Wilson  </h3>
-                              <a href="./flat-html/portfolio-single-11.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
-                            </div>
-                          </div>
-                          
-                          <div class="gridy-1 gridyhe-1">
-                            <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-12/flat-1.webp)">&nbsp;</div>
-                            
-                            <div class="gridinfo">
-                              <h3 class="gridtitle">Magnifique appartement au cœur du vieux Nice</h3>
-                              <a href="./flat-html/portfolio-single-15.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
-                            </div>
-                          </div>
-                          <div class="gridy-1 gridyhe-1">
-                            <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-13/flat-1.webp)">&nbsp;</div>
-                            <div class="gridinfo">
-                              <h3 class="gridtitle">Cocon au cœur de la vieille ville </h3>
-                              <a href="./flat-html/portfolio-single-12.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
-                            </div>
-                          </div>
-                          <div class="gridy-1 gridyhe-1">
-                            <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-14/flat-1.webp)">&nbsp;</div>
-                            
-                            <div class="gridinfo">
-                              <h3 class="gridtitle">Magnifique studio au cœur du vieux Nice</h3>
-                              <a href="./flat-html/portfolio-single-13.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
-                            </div>
-                          </div>
-                          <div class="gridy-1 gridyhe-1">
-                              <div class="gridimg" style="background-image: url(./assets/images/flat-img/flat-15/flat-1.webp)">&nbsp;</div>
-                              
-                              <div class="gridinfo">
-                                <h3 class="gridtitle">Havre de paix au cœur du vieux Nice</h3>
-                                <a href="./flat-html/portfolio-single-14.html"  class="grid-btn grid-more"><span> +</span> <i class="fa fa-plus"></i></a>
-                              </div>
-                            </div>
-                      </div>
-                </div>
+<body class="conciergerie-index-body" id="conciergerie-index-body">
+    <div class="main-page-container">
 
-        </div>
-        <div class="swiper-slide slide-anchor" id="swiper-slide-3" data-index="3">            
-          <div class="row">
-          <div class="col-md-12">
-           <div class="">
-             <div class="row m-2">
-                 <div class="col-md-5 text-center right-swiper-block" >
-                   <h3 class="text-center">ABOUT US ?</h3>
-                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, necessitatibus consequatur dolorem esse laborum, neque illum recusandae soluta nemo cum doloribus. Voluptates, suscipit rerum corporis quae aperiam nesciunt iure at. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente consequatur corrupti unde deserunt ut nobis architecto culpa delectus nisi, debitis, nemo soluta fugit illo, voluptate reiciendis ratione pariatur optio est.</p>
-                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto beatae, nesciunt consequuntur rem, dolorum fugit ducimus deleniti iste provident, nobis ullam nihil. Hic, nihil blanditiis fugit nostrum architecto perspiciatis eos. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit atque ipsam, debitis obcaecati cupiditate illum sint eos ea molestias! Ea sunt neque aperiam ad. Quas consectetur repellat totam sint? Omnis!</p>
-                     <button><a style="color: white;" href="./about-us.html">ABOUT US</a></button>
-                 </div>
-             </div>
-            </div>
-          </div>
-
-         </div></div>
-        <div class="swiper-slide slide-anchor" id="swiper-slide-5" data-index="4">
-          <div class="container-contact">
-            <div class="col-md-12">
-                
-              <div class="contact-form">
-              <div id="note"></div>
-                 <div id="fields">
-                  <h2>Contactez-nous </h2>
-                     <form id="ajax-contact-form">
-                       <p><input type="text" name="name" id="name" placeholder="Nom" value=""/></p>
-                       <p><input type="email" name="email" id="email" placeholder="Email" value=""/></p>
-                       <p><input type="text" name="phone" id="phone" placeholder="Phone" value=""/></p>
-                       <p><textarea name="msg" id="msg" placeholder="Message"></textarea></p>
-                       <input type="submit" name="submit" id="submit" value="Envoyer votre message"/>
-                     </form>
-                  </div>
-                 </div>
-
-        </div>
-        </div>
-        </div>
-        <!-- <div class="swiper-slide">
-            <div id="container-caroussel">
-      
-      
-              <input hidden type="radio" name="carousel-control" id="button_a" checked/>
-              <input hidden type="radio" name="carousel-control" id="button_b"/>
-              <input hidden type="radio" name="carousel-control" id="button_c"/>
-              <input hidden type="radio" name="carousel-control" id="button_d"/>            
-                      
-              
-              <div id="carousel">
-                  <div class="p-wrapper">
-                              
-                      <section class="panel_a">
-                        <img src="./assets/images/flat-img/flat-1/flat-1.png" alt="">
-                      </section>
-                              
-                      <section class="panel_b">
-                        <img src="./assets/images/flat-img/flat-2/flat-1.webp" alt="">
-                      </section>
-                              
-                      <section class="panel_c">
-                        <img src="./assets/images/flat-img/flat-3/flat-1.webp" alt="">
-                      </section>
-                              
-                      <section class="panel_d">
-                        <img src="./assets/images/flat-img/flat-4/flat-1.webp" alt="">
-                      </section>
-                              
-                  </div> <!-- // .p-wrapper -->
-              </div> <!-- // #carousel -->            
-                      
-              
-              <div id="navigation">
-                  <label for="button_a" class="label_a"> <span>Lorem ipsum dolor sit amet</span> </label>
-                  <label for="button_b" class="label_b"> <span>Lorem ipsum dolor sit amet</span> </label>
-                  <label for="button_c" class="label_c"> <span>Lorem ipsum dolor sit amet</span> </label>
-                  <label for="button_d" class="label_d"> <span>Lorem ipsum dolor sit amet</span> </label>
-              </div> <!-- // #navigation -->               
-                      
-              
-          </div> <!-- // #container -->
-  
+<section class="conciergerie-main-background">
+  <div class="conciergerie-main-overlay">
+<header class="conciergerie-section d-flex flex-wrap justify-content-center py-3 mb-4">
+  <nav id="conciergerie-nav" class="conciergerie-nav">
+    <div class="conciergerie-logo">
+        <a href="#conciergerie-index-body"><img src="./assets/images/logo/logo-2.png" alt="" srcset=""></a>
+        <!-- <div class="conciergerie-logo-txt">
+          <p>Be My Guest</p>
+          <span>Nice conciergerie</span>
         </div> -->
-
     </div>
-    <!-- If we need pagination -->
-    <!-- <div class="swiper-pagination"></div> -->
+    <ul class="conciergerie-main-nav">
+        <li><a href="./index.html">Accueil</a></li>
+        <li><a href="./a propos.html">a propos</a></li>
+        <li><a href="./solution.html">Nos Solutions</a></li>
+        <li><a href="./portfolio-classic.html">Nos biens</a></li>
 
-    <!-- If we need navigation buttons -->
-    <!-- <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div> -->
-    <button class="custom-swiper-button-prev">
-      <i class="fa fa-arrow-up"></i>
-    </button>
-    
-    <button class="custom-swiper-button-next">
-      <i class="fa fa-arrow-down"></i>
-    </button>
+        <li><a href="./contact-1.html">Contact</a></li>
+    </ul>
+
+</nav>
+</header>
+<div class="conciergerie-hamburger-menu">
+  <div class="menu-icon menu-icon-fullscreen" ><i class="fa fa-bars "></i></div>
+  <div class="menu-icon menu-icon-fullscreen-contact"><i class="fa fa-phone" id="phone-icon"></i>
+  </div>
+</div>  
 
 
-    <!-- If we need scrollbar -->
-
+<main class="conciergerie-main">
+  <div class="mySwiper-slide-text">
+    <div class="conciergerie-main-bottom-section"><a href="#conciergerie-section-solution">Nos solutions</a></div>
+    <div class="conciergerie-main-bottom-section"><a href="#conciergerie-section-masonry">Nos derniers biens</a></div>
+    <div class="conciergerie-main-bottom-section"><a href="#conciergerie-section-who-we-are">Qui sommes-nous ?</a></div>
+    <div class="conciergerie-main-bottom-section"><a href="#conciergerie-section-contact-us">Contactez-nous</a></div>
+  </div>
+  <div class="swiper mySwiper-main">
+    <div class="swiper-wrapper mySwiper-wrapper">
+      <div class="swiper-slide mySwiper-slide" id="mySwiper-slide-1">
+        <div class="swiper-overlay"></div>
+        <div class="mySwiper-container">
+          <div class="mySwiper-left">
+            <h1>Gestion Locative à Nice avec <span class="conciergerie-span-text-stroke">Be My Guest :  </span><br><span class="conciergerie-span-text-stroke">Maximisez vos Locations</span> en Toute Simplicité</h1>
+            <div class="mySwiper-cta">
+              <i class="fa fa-arrow-right conciergerie-cta-arrow"></i>
+              <a class="conciergerie-cta-txt" href="./solution.html">Découvrez nos solutions</a>
+            </div>
+          </div>
+          <div class="mySwiper-right">
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide mySwiper-slide" id="mySwiper-slide-2">
+        <div class="swiper-overlay"></div> 
+        <div class="mySwiper-container">
+          <div class="mySwiper-left-3">
+            <h2>Explorez Nos Dernières Offres de Location à Nice :<br> <span class="conciergerie-span-text-stroke">Votre Prochaine Destination vous Attend </span><br></h2>
+            <div class="mySwiper-cta">
+              <i class="fa fa-arrow-right conciergerie-cta-arrow"></i>
+              <a class="conciergerie-cta-txt" href="./portfolio-classic.html">Nos derniers biens</a>
+            </div>
+          </div>
+          <div class="mySwiper-right-3">
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide mySwiper-slide" id="mySwiper-slide-3">
+        <div class="mySwiper-container">
+          <div class="mySwiper-left-3">
+            <h2> <span class='conciergerie-span-text-stroke'>Optimisation de la Gestion Locative : </span><br> Les Clés du Succès pour les propriétaires</h2>
+            <div class="mySwiper-cta">
+              <i class="fa fa-arrow-right conciergerie-cta-arrow"></i>
+              <a class="conciergerie-cta-txt" href="./a propos.html">A propos de nous</a>
+            </div>
+          </div>
+          <div class="mySwiper-right-3">
+          </div>
+        </div>
+        <div class="swiper-overlay"></div> 
+      </div>
+      <div class="swiper-slide mySwiper-slide" id="mySwiper-slide-4">
+        <div class="mySwiper-container">
+          <div class="mySwiper-left-3">
+            <h2><span class="conciergerie-span-text-stroke">Maximisez vos Revenus</span> Locatifs à Nice :<br>  Parlez à nos Experts <span class="conciergerie-span-text-stroke">chez BeMyGuest </span> </h2>
+            <div class="mySwiper-cta">
+              <i class="fa fa-arrow-right conciergerie-cta-arrow"></i>
+              <a class="conciergerie-cta-txt" href="./portfolio-classic.html">Contactez-nous</a>
+            </div>
+          </div>
+          <div class="mySwiper-right-3">
+          </div>
+        </div>
+        <div class="swiper-overlay"></div> 
+      </div>
     </div>
-    <div>
-        
+    <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
+    <div class="swiper-pagination"></div>
+  </div>
+</main> 
+</div>
+</section>
+
+<div class="fullscreen-menu">
+  <div class="close-btn-fullscreen">&times;</div>
+  <ul>
+    <li><a href="./index.html">Accueil</a></li>
+    <li><a href="./a propos.html">a propos</a></li>
+    <li><a href="./solution.html">Nos Solutions</a></li>
+    <li><a href="./portfolio-classic.html">Nos biens</a></li>
+    <li><a href="./blog-creative.html">Blog</a></li>
+    <li><a href="./contact-1.html">Contact</a></li>
+  </ul>
+  <div class="allrights">
+    <p>@agence web fronthand - 2023</p>
+  </div>
+</div>
+
+<div class="contact-fullscreen-menu">
+  <div class="close-btn-fullscreen-contact">&times;</div>
+  <div class="contacts-infos">
+    <div class="contact-item">
+      <h5>Quentin GUIDICELLI</h5>
+      <div class="coordonates">
+        <p>mail@mail.com</p>
+        <p>+3300000000</p>
+      </div>
+    </div>
+    <div class="contact-item">
+      <h5>Anthony GASTAUD</h5>
+      <div class="coordonates">
+        <p>mail@mail.com</p>
+        <p>+3300000000</p>
+      </div>
+    </div>
+    <div class="contact-item">
+      <h5>Contact 3</h5>
+      <div class="coordonates">
+        <p>mail@mail.com</p>
+        <p>+3300000000</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="conciergerie-section conciergerie-section-solution" id="conciergerie-section-solution">
+    <div class="solution-wrapper conciergerie-solution">
+      <h2>NOS SOLUTIONS</h2>
+      <div class="row">
+        <div class="col-md-12 mb-3">
+            <p >Nous proposons des solutions flexibles et personnalisées qui correspondront exactement à vos besoins tout en respectant les règlementations en vigueur à Nice.
+            Notre priorité est de proposer aux voyageurs la meilleure expérience tout en maximisant votre rentabilité.
+            BMG permet également aux propriétaires de réserver leur bien quand bon leur semble à des fins personnelles. 
+            Vous pouvez donc tout simplement choisir l'option qui vous correspond le mieux, en fonction de vos préférences.</p>
+        </div>
+
+        <div class="solutions-container">
+          <div class="solution-container-img" id="solution-container-background-img-1">
+            <a href="solution.html?source=index&buttonId=btn1" class="popup-link" id="btn1">
+              <div class="solution-container" >
+              <h4>Forfait location saisonnière </h4>
+              <p>A partir de 20%</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="solution-container-img" id="solution-container-background-img-2">
+            <a href="solution.html?source=index&buttonId=btn2" class="popup-link" id="btn2">
+            <div class="solution-container" >
+              <h4>Forfait location moyenne durée </h4>
+              <p>A partir de 12%</p>
+            </div>
+          </a>
+          </div>
+
+          <div class="solution-container-img" id="solution-container-background-img-3">
+            <a href="solution.html?source=index&buttonId=btn3" class="popup-link" id="btn3">
+            <div class="solution-container"id="solution-container-3">
+              <h4>Forfait location mixte </h4>
+              <p id="solution-sentence-3">Période saisonnière : A partir de 20% <br>
+              Période Etudiante : A partir de 8%</p>
+            </div>
+          </a>
+          </div>
+
+        </div>
+        <button class="col-md-4 m-auto mt-5"><a style="color: white;" href="./solution.html">découvrir NOS SOLUTIONS</a></button>
+      </div>
+    </div>
+    <div class="next-section next-section-solutions" id="next-section-2">
+      <a href="#conciergerie-section-masonry"><i class="fa fa-arrow-down"></i></a>
+    </div>
+  </section>
+  <section class="conciergerie-section conciergerie-section-masonry" id="conciergerie-section-masonry">
+    <div class="conciergerie-section-masonry-title">
+      <h2>NOS DERNIERS BIENS</h2>
     </div>
 
-    <script>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper swiper-container-masonry">
+          <div class="swiper-slide swiper-slide-masonry" id="swiper-slide-1">
+            <div class="swiper-slide-masonry-container">
+            <h3 class="swiper-slide-masonry-title slide-content">GRAND APPARTEMENT AU CŒUR DE NICE</h3><br>
+            <p class="swiper-slide-masonry-text slide-content">Besoin d’espace ? Cet appartement situé dans le quartier prisé de la coulée verte est le choix parfait pour un séjour en famille ou entre amis à Nice.</p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-masonry" id="swiper-slide-2">
+            <div class="swiper-slide-masonry-container">
+            <h3 class="swiper-slide-masonry-title slide-content">NID DOUILLET AU COEUR DE LA VILLE</h3><br>
+            <p class="swiper-slide-masonry-text slide-content">Voyager est un plaisir où l'on garde des souvenirs pour la vie. Pour cette raison, dans cet appartement lumineux avec 3 chambres confortables et deux salles de bain, chaque détail a été pensé pour rendre votre séjour inoubliable.</p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-masonry" id="swiper-slide-3">
+            <div class="swiper-slide-masonry-container">
+            <h3 class="swiper-slide-masonry-title slide-content">GRAND APPARTEMENT AU CENTRE DE NICE</h3><br>
+            <p class="swiper-slide-masonry-text slide-content">Ce grand appartement situé au cœur de la Libération est l'endroit idéal pour les groupes d’amis ou famille qui souhaitent découvrir les quartiers dynamiques et animés de Nice. </p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-masonry" id="swiper-slide-4">
+            <div class="swiper-slide-masonry-container">
+            <h3 class="swiper-slide-masonry-title slide-content">VILLA CONTEMPORAINE DANS LES HAUTEURS DE NICE</h3><br>
+            <p class="swiper-slide-masonry-text slide-content">Villa contemporaine climatisée de 180m2 située dans un quartier calme et résidentiel. 3 chambres avec leurs SDB ou douches attenantes.</p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-masonry" id="swiper-slide-5">
+            <div class="swiper-slide-masonry-container">
+            <h3 class="swiper-slide-masonry-title slide-content">L'ATELIER MAISON - PISCINE JARDIN ET VUE SUR LES COLLINES DE NICE</h3><br>
+            <p class="swiper-slide-masonry-text slide-content">Un petit air de Provence : Avec ses cyprès, ses pins parasol et sa vue dégagée sur la campagne elle trône en haut de la colline. </p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-masonry" id="swiper-slide-6">
+            <div class="swiper-slide-masonry-container">
+            <h3 class="swiper-slide-masonry-title slide-content">BEL APPARTEMENT PLACE ROSSETTI</h3><br>
+            <p class="swiper-slide-masonry-text slide-content">Cet appartement du Vieux Nice est le choix idéal pour ceux qui cherchent l'authenticité et le charme de la vieille ville.</p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-masonry" id="swiper-slide-7">
+            <div class="swiper-slide-masonry-container">
+            <h3 class="swiper-slide-masonry-title slide-content">CHARMANT APPARTEMENT AU CŒUR DU CARRE D’OR</h3><br>
+            <p class="swiper-slide-masonry-text slide-content">Très bel appartement, spacieux et idéalement situé. Hypercentre. Alliant à la fois charme de l'ancien et décor contemporain, il vous offrira tout le confort nécessaire pour parfaire votre séjour touristique ou d'affaires.</p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-masonry" id="swiper-slide-8">
+            <div class="swiper-slide-masonry-container">
+            <h3 class="swiper-slide-masonry-title slide-content">CHARMANT APPARTEMENT PROCHE PLACE MASSENA</h3><br>
+            <p class="swiper-slide-masonry-text slide-content">Séjournez dans un splendide appartement de 80m2 avec climatisation bénéficiant de deux chambres avec salles de bain attenantes.</p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-masonry" id="swiper-slide-9">
+            <div class="swiper-slide-masonry-container">
+            <h3 class="swiper-slide-masonry-title slide-content">MAGNIFIQUE APPARTEMENT DE LUXE AU SEIN DU CARRE D’OR</h3><br>
+            <p class="swiper-slide-masonry-text slide-content">Sublime appartement d'exception, luxueux, moderne, lumineux, situé dans le très chic Carré d’Or</p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-masonry" id="swiper-slide-10">
+            <div class="swiper-slide-masonry-container">
+            <h3 class="swiper-slide-masonry-title slide-content">LOFT AU COEUR DE LIBÉRATION</h3><br>
+            <p class="swiper-slide-masonry-text slide-content">Si vous cherchez un endroit paisible pour vos vacances à Nice, ce loft design au cœur du quartier Libération, et rénové par un architecte récemment, est l'endroit idéal.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+
+      </div>
+      <div class="conciergerie-btn-masonry">
+        <button class="col-md-4 m-auto mt-5"><a style="color: white;" href="./portfolio-classic.html">TOUS NOS BIENS</a></button>
+      </div>
+      <div class="next-section next-section-masonry">
+        <a href="#conciergerie-section-who-we-are"><i class="fa fa-arrow-down"></i></a>
+      </div>
+  </section>
+  <section class="conciergerie-section" id="conciergerie-section-who-we-are" >
+    <div class="row">
+      <div class="right-swiper-block conciergerie-quote-title" id="conciergerie-quote-title-who-we-are">
+        <h2>'La conciergerie d'élégance sur la Côte d'Azur : Notre histoire et notre engagement à votre service'</h2>
+      </div>
+      <div class="left-swiper-block" >
+        <div class="conciergerie-text">
+          <h3>a propos us</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto beatae, nesciunt consequuntur rem, dolorum fugit ducimus deleniti iste provident, nobis ullam nihil. Hic, nihil blanditiis fugit nostrum architecto perspiciatis eos. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit atque ipsam, debitis obcaecati cupiditate illum sint eos ea molestias! Ea sunt neque aperiam ad. Quas consectetur repellat totam sint? Omnis!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse asperiores quidem repellat dicta aspernatur unde deleniti vero quibusdam architecto quod atque veniam nisi rem quo, doloribus autem ipsum dolores ullam?</p>
+          <button><a style="color: white;" href="./a propos.html">CONTACT US</a></button>
+        </div>
+      </div>
+    </div>
+    <div class="next-section next-section-who-we-are">
+      <a href="#conciergerie-section-contact-us"><i class="fa fa-arrow-down"></i></a>
+    </div>
+  </section>
+
+  <section class="conciergerie-section conciergerie-double-section conciergerie-section-contact" id="conciergerie-section-contact-us">
+    <div class="contact-form">
+      <h3>Contactez-nous</h3>
       
-    </script>
-    <script>
-      var nestedSwiper = new Swiper(".mySwiper-nested", {
-        direction: "vertical",
-        slidesPerView: "auto",
-        freeMode: true,
-        scrollbar: {
-          el: ".swiper-scrollbar",
+      <div id="fields">
+          <form id="ajax-contact-form" action="https://formsubmit.co/andygarcia@fronthand.fr" method="POST">
+            <p><input type="text" name="name" id="name" placeholder="Nom" value=""/></p>
+            <p><input type="email" name="email" id="email" placeholder="Email" value=""/></p>
+            <p><input type="text" name="phone" id="phone" placeholder="Phone" value=""/></p>
+            <p><textarea name="msg" id="msg" placeholder="Message"></textarea></p>
+            <input type="hidden" name="_next" value="https://bmg-nice-conciegerie.fr/thanks.html">
+            <input class='conciergerie-btn' type="submit" name="submit" id="submit" value="Envoyer votre message"/>
+          </form>
+       </div>
+   </div>
+    <div class="conciergerie-quote-title" id="conciergerie-quote-title-contact">
+      <h2>'Contactez-nous pour un service personnalisé de haut standing dans les environs de Nice'</h2>
+    </div>
+  </section>
+
+  </div>
+  <script>
+const section = document.querySelector('#conciergerie-section-solution');
+const section1 = document.querySelector('#conciergerie-section-masonry');
+const section2 = document.querySelector('#conciergerie-quote-title-who-we-are');
+const section3 = document.querySelector('#conciergerie-section-contact-us');
+const nav = document.querySelector('nav')
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {      
+      nav.style.visibility = 'hidden'
+    } else {
+      nav.style.visibility = 'visible'
+    }
+  });
+}, { threshold: 0.5 }); 
+
+observer.observe(section);
+
+const observer1 = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {      
+      nav.style.visibility = 'hidden'
+    } else {
+      nav.style.visibility = 'visible'
+    }
+  });
+}, { threshold: 0.5 }); 
+
+observer1.observe(section1);
+
+const observer2 = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {      
+      nav.style.visibility = 'hidden'
+    } else {
+      nav.style.visibility = 'visible'
+    }
+  });
+}, { threshold: 0.5 }); 
+
+observer2.observe(section2);
+
+const observer3 = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {      
+      nav.style.visibility = 'hidden'
+    } else {
+      nav.style.visibility = 'visible'
+    }
+  });
+}, { threshold: 0.5 }); 
+observer3.observe(section3);
+
+
+
+  </script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      freeMode: true,
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
         },
-        mousewheel: true,
-        scrollbar: {
-          el: '.swiper-scrollbar',
-          draggable: true,
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
         },
-      });
-    </script>
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/swiper-2.js"></script>
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(function() {
+    var preloaderContainer = document.querySelector(".preloader-container");
+    preloaderContainer.style.opacity = "0"; 
+    setTimeout(function() {
+      preloaderContainer.style.display = "none"; 
+    }, 1000);
+  }, 800);
+});
+
+
+  </script>
+  
+
+
+
+  <script>
     
+    var swiper = new Swiper(".mySwiper-main", {
+      autoplay: {
+        delay: 7500,
+        disableOnInteraction: true,
+      },
+
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+        keyboard: {
+        enabled: true,
+      },
+    });
+
+
+
+  </script>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    let currentSection = 0;
+    let isScrolling = false;
+    
+    function scrollToSection(index) {
+      sections[index].scrollIntoView({ behavior: "smooth" });
+      currentSection = index;
+    }
+    
+    document.addEventListener("wheel", (e) => {
+      if (isScrolling) return;
+      
+      if (e.deltaY > 0 && currentSection < sections.length - 1) {
+        isScrolling = true;
+        scrollToSection(currentSection + 1);
+        setTimeout(() => {
+          isScrolling = false;
+        }, 1000); // Délai pour éviter un défilement rapide
+      } else if (e.deltaY < 0 && currentSection > 0) {
+        isScrolling = true;
+        scrollToSection(currentSection - 1);
+        setTimeout(() => {
+          isScrolling = false;
+        }, 1000); // Délai pour éviter un défilement rapide
+      }
+    });
+    
+    
+    
+    
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/swiper-2.js"></script>
+
 </body>
-</html>
+  

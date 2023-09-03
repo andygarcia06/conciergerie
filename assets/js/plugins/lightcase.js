@@ -340,7 +340,7 @@
 		},
 
 		/**
-		 * Normalizes an url and returns information about the resource path,
+		 * Normalizes an url and returns information a propos the resource path,
 		 * the viewport width as well as density if defined.
 		 *
 		 * @param	{string}	url	Path to resource in format of an url or srcset

@@ -1,38 +1,28 @@
 ﻿
-document.addEventListener("DOMContentLoaded", function() {
-  const menuIcon = document.querySelector(".menu-icon");
-  const sidebar = document.querySelector(".sidebar");
-  const closeButton = document.querySelector(".close-button");
-  const siteHeader = document.querySelector(".conciergerie-main-nav");
-
-
-
-
-  menuIcon.addEventListener("click", function() {
-    sidebar.classList.toggle("open");
-  });
-
-  closeButton.addEventListener("click", function() {
-    sidebar.classList.remove("open");
-  });
-});
-
-document.getElementById("phone-icon").addEventListener("click", function() {
-  var sidebar = document.getElementById("second-sidebar");
+  const menuIcon = document.querySelector('.menu-icon-fullscreen');
+  const fullscreenMenu = document.querySelector('.fullscreen-menu');
+  const closeBtn = document.querySelector('.close-btn-fullscreen');
   
-  if (sidebar.style.display === "none") {
-    sidebar.style.display = "block";
-  } else {
-    sidebar.style.display = "none";
-
-    // Ajouter un gestionnaire d'événement pour le clic sur l'icône de fermeture
-var closeIcon = document.querySelector('.close-icon-second')
-closeIcon.addEventListener('click', function() {
-// Cacher la deuxième sidebar
-secondSidebar.style.display = 'none';
-});
-  }
-});
+  menuIcon.addEventListener('click', () => {
+    fullscreenMenu.classList.toggle('active');
+  });
+  
+  closeBtn.addEventListener('click', () => {
+    fullscreenMenu.classList.remove('active');
+  });
+  
+  const menuIconContact = document.querySelector('.menu-icon-fullscreen-contact');
+  const fullscreenMenuContact = document.querySelector('.contact-fullscreen-menu');
+  const closeBtnContact = document.querySelector('.close-btn-fullscreen-contact');
+  
+  menuIconContact.addEventListener('click', () => {
+    fullscreenMenuContact.classList.toggle('active');
+  });
+  
+  closeBtnContact.addEventListener('click', () => {
+    fullscreenMenuContact.classList.remove('active');
+  });
+  
 
 
 
@@ -58,30 +48,43 @@ TweenMax.from(".menu", 1, {
   ease: Expo.easeInOut
 })
 
-TweenMax.from(".conciergerie-main-title", 1, {
+TweenMax.from(".mySwiper-slide h1", 1, {
   opacity: 0,
   delay: 1,
   y: 20,
   ease: Expo.easeInOut
 })
 
-TweenMax.from(".next-section", 1, {
+TweenMax.from(".mySwiper-cta", 1.2, {
   opacity: 0,
   delay: 1.6,
   y: 20,
   ease: Expo.easeInOut
 })
 
-TweenMax.from(".line-one", 1, {
+TweenMax.from(".mySwiper-slide-text", 1, {
   opacity: 0,
-  delay: 0.8,
+  delay: 1,
   y: -1000,
   ease: Expo.easeInOut
 })
-TweenMax.from(".line-two", 1, {
+TweenMax.from(".conciergerie-hamburger-menu", 1, {
   opacity: 0,
-  delay: 1.5,
+  delay: 2.2,
   y: -800,
+  ease: Expo.easeInOut
+})
+
+TweenMax.from(".conciergerie-main-btns", 1, {
+  opacity: 0,
+  delay: 2.6,
+  y: -800,
+  ease: Expo.easeInOut
+})
+
+TweenMax.from(".conciergerie-small-nav", 1, {
+  opacity: 0,
+  delay: 2.6,
   ease: Expo.easeInOut
 })
 
@@ -90,6 +93,41 @@ TweenMax.from(".conciergerie-year", 1, {
   opacity: 0,
   delay: 1.4,
   y: -20,
+  ease: Expo.easeInOut
+})
+
+TweenMax.from(".conciergerie-main-sentence", 1, {
+  opacity: 0,
+  delay: 1.7,
+  x: -120,
+  ease: Expo.easeInOut
+})
+
+TweenMax.from("#conciergerie-small-nav-1", 1, {
+  opacity: 0,
+  delay: 1.7,
+  x: -120,
+  ease: Expo.easeInOut
+})
+
+TweenMax.from("#conciergerie-small-nav-2", 1, {
+  opacity: 0,
+  delay: 1.9,
+  x: -120,
+  ease: Expo.easeInOut
+})
+
+TweenMax.from("#conciergerie-small-nav-3", 1, {
+  opacity: 0,
+  delay: 2.1,
+  x: -120,
+  ease: Expo.easeInOut
+})
+
+TweenMax.from("#conciergerie-small-nav-4", 1, {
+  opacity: 0,
+  delay: 2.3,
+  x: -120,
   ease: Expo.easeInOut
 })
 
@@ -843,7 +881,6 @@ TweenMax.staggerFrom(".conciergerie-media ul li", 2, {
     ];
 
 
-    //set google map options
     let map_options = {
       center: new google.maps.LatLng(latitude, longitude),
       zoom: map_zoom,
@@ -856,16 +893,14 @@ TweenMax.staggerFrom(".conciergerie-media ul li", 2, {
       styles: style,
     }
 
-    //inizialize the map
     let map = new google.maps.Map(document.getElementById('google-container'), map_options);
-    //add a custom marker to the map      
 
 
     let contentString = '<div class="contact-info-box left">' +
       '<h3>CONTACT INFORMATION.</h3>' +
       '<ul>' +
-      '<li><i class="fa-solid fa-location-dot"></i>Melbourne, Australia</li>' +
-      '<li><i class="fas fa-phone"></i>765-302-2878</li>' +
+      '<li><i class="fa-solid fa-location-dot"></i>Nice - france</li>' +
+      '<li><i class="fas fa-phone"></i></li>' +
       '<li><i class="fas fa-paper-plane"></i><a href="mailto:">name@domain.com</a></li>' +
       '<li><i class="fas fa-globe"></i><a href="">mycompanyname.com</a></li>' +
       '</ul>' +
@@ -880,7 +915,7 @@ TweenMax.staggerFrom(".conciergerie-media ul li", 2, {
     let marker = new google.maps.Marker({
       position: new google.maps.LatLng(latitude, longitude),
       map: map,
-      title: 'Melbourne, Australia',
+      title: 'Nice, France',
       visible: true,
       icon: marker_url,
     });
@@ -899,15 +934,12 @@ TweenMax.staggerFrom(".conciergerie-media ul li", 2, {
     });
 
 
-    //add custom buttons for the zoom-in/zoom-out on the map
     function CustomZoomControl(controlDiv, map) {
-      //grap the zoom elements from the DOM and insert them in the map 
       let controlUIzoomIn = document.getElementById('zoom-in'),
         controlUIzoomOut = document.getElementById('zoom-out');
       controlDiv.appendChild(controlUIzoomIn);
       controlDiv.appendChild(controlUIzoomOut);
 
-      // Setup the click event listeners and zoom-in or out according to the clicked element
       google.maps.event.addDomListener(controlUIzoomIn, 'click', function () {
         map.setZoom(map.getZoom() + 1)
       });
@@ -919,7 +951,6 @@ TweenMax.staggerFrom(".conciergerie-media ul li", 2, {
     let zoomControlDiv = document.createElement('div');
     let zoomControl = new CustomZoomControl(zoomControlDiv, map);
 
-    //insert the zoom div on the top left of the map
     map.controls[google.maps.ControlPosition.LEFT_TOP].push(zoomControlDiv);
   }
   }
@@ -930,6 +961,8 @@ TweenMax.staggerFrom(".conciergerie-media ul li", 2, {
   
 
   // Conciergerie contact block fade in and fade out
+
+
 
 
 
