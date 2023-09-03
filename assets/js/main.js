@@ -963,7 +963,34 @@ TweenMax.staggerFrom(".conciergerie-media ul li", 2, {
   // Conciergerie contact block fade in and fade out
 
 
+  const sections = document.querySelectorAll("section");
+  let currentSection = 0;
+  let isScrolling = false;
+  
+  function scrollToSection(index) {
+    sections[index].scrollIntoView({ behavior: "smooth" });
+    currentSection = index;
+  }
+  
+  document.addEventListener("wheel", (e) => {
+    if (isScrolling) return;
+    
+    if (e.deltaY > 0 && currentSection < sections.length - 1) {
+      isScrolling = true;
+      scrollToSection(currentSection + 1);
+      setTimeout(() => {
+        isScrolling = false;
+      }, 1000); // Délai pour éviter un défilement rapide
+    } else if (e.deltaY < 0 && currentSection > 0) {
+      isScrolling = true;
+      scrollToSection(currentSection - 1);
+      setTimeout(() => {
+        isScrolling = false;
+      }, 1000); // Délai pour éviter un défilement rapide
+    }
+  });
 
+  
 
 
 
